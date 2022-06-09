@@ -1,6 +1,6 @@
 {
   "name": "mathml2omml",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a MathML to OMML converter ",
   "main": "src/index.js",
   "type": "module",
