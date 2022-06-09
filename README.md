@@ -23,7 +23,7 @@ const omml = mml2omml(mml)
 
 console.log(omml)
 
-> <m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\">
+> <m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
 >    <m:r>
 >        <m:t xml:space="preserve">2+2=4</m:t>
 >    </m:r>
