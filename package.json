@@ -1,0 +1,30 @@
+{
+  "name": "mathml2omml",
+  "version": "0.1.0",
+  "description": "a MathML to OMML converter ",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiduswriter/mathml2omml.git"
+  },
+  "keywords": [
+    "mml",
+    "mathml",
+    "omml"
+  ],
+  "author": "Johannes Wilm",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/fiduswriter/mathml2omml/issues"
+  },
+  "homepage": "https://github.com/fiduswriter/mathml2omml#readme",
+  "dependencies": {
+    "jest": "^28.1.0",
+    "xml-formatter": "^2.6.1",
+    "xml-js": "^1.6.11"
+  }
+}

@@ -1,0 +1,11 @@
+<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+  <m:r>
+    <w:rPr>
+      <w:i/>
+    </w:rPr>
+    <m:rPr>
+      <m:nor/>
+    </m:rPr>
+    <m:t xml:space="preserve">ß</m:t>
+  </m:r>
+</m:oMath>

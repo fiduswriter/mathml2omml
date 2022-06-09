@@ -1,0 +1,42 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow>
+      <mtext>Boolean algebra:&#160;</mtext>
+      <mover>
+        <mrow>
+          <munderover>
+            <mo>&#8899;</mo>
+            <mrow>
+              <mi>i</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>n</mi>
+          </munderover>
+          <msub>
+            <mi>A</mi>
+            <mi>i</mi>
+          </msub>
+        </mrow>
+        <mo>&#175;</mo>
+      </mover>
+      <mo>=</mo>
+      <munderover>
+        <mo>&#8898;</mo>
+        <mrow>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>n</mi>
+      </munderover>
+      <mover accent="true">
+        <msub>
+          <mi>A</mi>
+          <mi>i</mi>
+        </msub>
+        <mo>&#175;</mo>
+      </mover>
+    </mrow>
+  </semantics>
+</math>

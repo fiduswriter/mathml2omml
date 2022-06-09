@@ -1,0 +1,5 @@
+The following applies to all files in this folder:
+
+Copyright 2020 Josephus Javawaski (Joe Java)
+Source: http://eyeasme.com/Joe/MathML/MathML_browser_test.html
+License: GFDLv1.3 (see LICENSE)

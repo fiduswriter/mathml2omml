@@ -1,0 +1,41 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow>
+      <mi>c</mi>
+      <mo>=</mo>
+      <mover>
+        <mover>
+          <mrow>
+            <munder>
+              <munder>
+                <mrow>
+                  <mspace width="1.1em"/>
+                  <mi>a</mi>
+                  <mspace width="1.1em"/>
+                </mrow>
+                <mo>&#9183;</mo>
+              </munder>
+              <mtext>real</mtext>
+            </munder>
+            <mo>+</mo>
+            <munder>
+              <munder>
+                <mrow>
+                  <mspace width="1em"/>
+                  <mi>b</mi>
+                  <mo lspace="0">&#8290;</mo>
+                  <mi>&#8520;</mi>
+                  <mspace width="1em"/>
+                </mrow>
+                <mo>&#9183;</mo>
+              </munder>
+              <mtext>imaginary</mtext>
+            </munder>
+          </mrow>
+          <mo>&#9182;</mo>
+        </mover>
+        <mtext>complex number</mtext>
+      </mover>
+    </mrow>
+  </semantics>
+</math>

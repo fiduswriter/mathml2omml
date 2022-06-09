@@ -1,0 +1,35 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow>
+      <mtext>Logic:&#160;</mtext>
+      <mo>&#172;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mi>p</mi>
+          <mo>&#8743;</mo>
+          <mi>q</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mo lspace="veryverythickmathspace" rspace="veryverythickmathspace">&#10234;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mo>&#172;</mo>
+          <mi>p</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mo>&#8744;</mo>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mo>&#172;</mo>
+          <mi>q</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </semantics>
+</math>

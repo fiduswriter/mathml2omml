@@ -1,0 +1,39 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow>
+      <mo rspace="0">&#8704;</mo>
+      <mi>A</mi>
+      <mo lspace="mediummathspace" rspace="0">&#8707;</mo>
+      <mi>P</mi>
+      <mo lspace="mediummathspace" rspace="0">&#8704;</mo>
+      <mi>B</mi>
+      <mspace width="thinmathspace"/>
+      <mrow>
+        <mo>[</mo>
+        <mrow>
+          <mi>B</mi>
+          <mo>&#8712;</mo>
+          <mi>P</mi>
+          <mo lspace="veryverythickmathspace" rspace="veryverythickmathspace">&#10234;</mo>
+          <mo rspace="0">&#8704;</mo>
+          <mi>C</mi>
+          <mspace width="thinmathspace"/>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>C</mi>
+              <mo>&#8712;</mo>
+              <mi>B</mi>
+              <mo>&#8658;</mo>
+              <mi>C</mi>
+              <mo>&#8712;</mo>
+              <mi>A</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>]</mo>
+      </mrow>
+    </mrow>
+  </semantics>
+</math>

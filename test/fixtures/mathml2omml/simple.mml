@@ -1,0 +1,20 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mfrac>
+      <mrow>
+        <mo>(</mo>
+        <mrow>
+          <mn>4</mn>
+          <mo>&#8290;</mo>
+          <mi>x</mi>
+          <mo>&#8722;</mo>
+          <mn>6</mn>
+          <mo>&#8290;</mo>
+          <mi>n</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+      <mn>34</mn>
+    </mfrac>
+  </semantics>
+</math>

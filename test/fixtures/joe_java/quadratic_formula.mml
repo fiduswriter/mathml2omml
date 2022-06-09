@@ -1,0 +1,32 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow>
+      <mi>x</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mo form="prefix">&#8722;</mo>
+          <mi>b</mi>
+          <mo>&#177;</mo>
+          <msqrt>
+            <msup>
+              <mi>b</mi>
+              <mn>2</mn>
+            </msup>
+            <mo>&#8722;</mo>
+            <mn>4</mn>
+            <mo>&#8290;</mo>
+            <mi>a</mi>
+            <mo>&#8290;</mo>
+            <mi>c</mi>
+          </msqrt>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+          <mo>&#8290;</mo>
+          <mi>a</mi>
+        </mrow>
+      </mfrac>
+    </mrow>
+  </semantics>
+</math>

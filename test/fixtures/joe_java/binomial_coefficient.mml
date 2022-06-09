@@ -1,0 +1,60 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <mrow>
+      <mi>C</mi>
+      <mrow>
+        <mo>(</mo>
+        <mi>n</mi>
+        <mo>, </mo>
+        <mi>k</mi>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <msubsup>
+        <mi>C</mi>
+        <mi>k</mi>
+        <mi>n</mi>
+      </msubsup>
+      <mo>=</mo>
+      <mmultiscripts>
+        <mi>C</mi>
+        <mi>k</mi>
+        <none/>
+        <mprescripts/>
+        <mi>n</mi>
+        <none/>
+      </mmultiscripts>
+      <mo>=</mo>
+      <mrow>
+        <mo>(</mo>
+        <mfrac linethickness="0">
+          <mi>n</mi>
+          <mi>k</mi>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mi>n</mi>
+          <mo lspace="0">!</mo>
+        </mrow>
+        <mrow>
+          <mi>k</mi>
+          <mo lspace="0">!</mo>
+          <mo rspace="mediummathspace">&#8290;</mo>
+          <mrow>
+            <mo>(</mo>
+            <mrow>
+              <mi>n</mi>
+              <mo>&#8722;</mo>
+              <mi>k</mi>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mo lspace="0">!</mo>
+        </mrow>
+      </mfrac>
+    </mrow>
+  </semantics>
+</math>
