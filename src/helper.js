@@ -27,3 +27,21 @@ export function cleanText (element, options = { text: 'remove' }) {
     })
   }
 }
+
+export function getTextContent (node, trim = true) {
+  let returnString = ''
+  if (node.type === 'text') {
+    let text = node.text.replace(/[\u2062]|[\u200B]/g, '')
+    if (trim) {
+      text = text.trim()
+    }
+    returnString += text
+  } else if (node.elements) {
+    node.elements.forEach(
+      subNode => {
+        returnString += getTextContent(subNode, trim)
+      }
+    )
+  }
+  return returnString
+}

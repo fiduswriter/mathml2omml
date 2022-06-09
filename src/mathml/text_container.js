@@ -108,24 +108,6 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
   return targetElement
 }
 
-export function getTextContent (node, trim = true) {
-  let returnString = ''
-  if (node.type === 'text') {
-    let text = node.text.replace(/[\u2062]|[\u200B]/g, '')
-    if (trim) {
-      text = text.trim()
-    }
-    returnString += text
-  } else if (node.elements) {
-    node.elements.forEach(
-      subNode => {
-        returnString += getTextContent(subNode, trim)
-      }
-    )
-  }
-  return returnString
-}
-
 export function mtext (element, targetParent, previousSibling, nextSibling, ancestors) {
   return textContainer(element, targetParent, previousSibling, nextSibling, ancestors, 'mtext')
 }

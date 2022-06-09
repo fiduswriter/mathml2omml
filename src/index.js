@@ -1,7 +1,7 @@
 import { xml2js, js2xml } from 'xml-js'
 
 import { walker } from './walker'
-import { cleanText } from './helper'
+import { cleanText } from './helpers'
 
 class MML2OMML {
   constructor (mmlString) {

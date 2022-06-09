@@ -1,5 +1,5 @@
 import { walker } from '../walker'
-import { getTextContent } from './text_container'
+import { getTextContent } from '../helpers'
 
 export function mroot (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Root
