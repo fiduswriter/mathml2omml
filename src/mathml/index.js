@@ -1,4 +1,5 @@
 export {math, semantics} from "./math"
+export {menclose} from "./menclose"
 export {mfrac} from "./mfrac"
 export {mglyph} from "./mglyph"
 export {mmultiscripts} from "./mmultiscripts"

@@ -1223,6 +1223,246 @@ exports[`Can produce OOML from mathml2omml/groupchr.mml 1`] = `
 </m:oMath>"
 `;
 
+exports[`Can produce OOML from mathml2omml/menclose.mml 1`] = `
+"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+    <m:rad>
+        <m:radPr>
+            <m:degHide m:val=\\"on\\"/>
+        </m:radPr>
+        <m:deg/>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">a+b</m:t>
+            </m:r>
+        </m:e>
+    </m:rad>
+    <m:rad>
+        <m:radPr>
+            <m:degHide m:val=\\"on\\"/>
+        </m:radPr>
+        <m:deg/>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">c+d</m:t>
+            </m:r>
+        </m:e>
+    </m:rad>
+    <m:borderBox>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">e+f</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">g+h</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">i+j</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">k+l</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">m+n</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">o+p</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">q+r</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">s+t</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">u+v</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+            <m:strikeBLTR m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">w+x</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+            <m:strikeTLBR m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">y+z</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+            <m:strikeV m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">aa+bb</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+            <m:strikeH m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">cc+dd</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">ee+ff</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">gg+hh</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">ii+jj</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">kk+ll</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val=\\"on\\"/>
+            <m:hideBot m:val=\\"on\\"/>
+            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideRight m:val=\\"on\\"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space=\\"preserve\\">mm+nn</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+</m:oMath>"
+`;
+
 exports[`Can produce OOML from mathml2omml/ms.mml 1`] = `
 "<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
     <m:r>

@@ -1,0 +1,104 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics>
+    <menclose>
+      <mi> a </mi>
+      <mo> + </mo>
+      <mi> b </mi>
+    </menclose>
+    <menclose notation="longdiv">
+      <mi> c </mi>
+      <mo> + </mo>
+      <mi> d </mi>
+    </menclose>
+    <menclose notation="actuarial">
+      <mi> e </mi>
+      <mo> + </mo>
+      <mi> f </mi>
+    </menclose>
+    <menclose notation="radical">
+      <mi> g </mi>
+      <mo> + </mo>
+      <mi> h </mi>
+    </menclose>
+    <menclose notation="box">
+      <mi> i </mi>
+      <mo> + </mo>
+      <mi> j </mi>
+    </menclose>
+    <menclose notation="roundedbox">
+      <mi> k </mi>
+      <mo> + </mo>
+      <mi> l </mi>
+    </menclose>
+    <menclose notation="circle">
+      <mi> m </mi>
+      <mo> + </mo>
+      <mi> n </mi>
+    </menclose>
+    <menclose notation="left">
+      <mi> o </mi>
+      <mo> + </mo>
+      <mi> p </mi>
+    </menclose>
+    <menclose notation="right">
+      <mi> q </mi>
+      <mo> + </mo>
+      <mi> r </mi>
+    </menclose>
+    <menclose notation="top">
+      <mi> s </mi>
+      <mo> + </mo>
+      <mi> t </mi>
+    </menclose>
+    <menclose notation="bottom">
+      <mi> u </mi>
+      <mo> + </mo>
+      <mi> v </mi>
+    </menclose>
+    <menclose notation="updiagonalstrike">
+      <mi> w </mi>
+      <mo> + </mo>
+      <mi> x </mi>
+    </menclose>
+    <menclose notation="downdiagonalstrike">
+      <mi> y </mi>
+      <mo> + </mo>
+      <mi> z </mi>
+    </menclose>
+    <menclose notation="verticalstrike">
+      <mi> aa </mi>
+      <mo> + </mo>
+      <mi> bb </mi>
+    </menclose>
+    <menclose notation="horizontalstrike">
+      <mi> cc </mi>
+      <mo> + </mo>
+      <mi> dd </mi>
+    </menclose>
+    <menclose notation="madruwb">
+      <mi> ee </mi>
+      <mo> + </mo>
+      <mi> ff </mi>
+    </menclose>
+    <menclose notation="updiagonalarrow">
+      <mi> gg </mi>
+      <mo> + </mo>
+      <mi> hh </mi>
+    </menclose>
+    <menclose notation="phasorangle">
+      <mi> ii </mi>
+      <mo> + </mo>
+      <mi> jj </mi>
+    </menclose>
+    <menclose notation="circle box">
+      <mi> kk </mi>
+      <mo> + </mo>
+      <mi> ll </mi>
+    </menclose>
+    <menclose notation="FISH">
+      <mi> mm </mi>
+      <mo> + </mo>
+      <mi> nn </mi>
+    </menclose>
+  </semantics>
+</math>
