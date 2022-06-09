@@ -59,3 +59,25 @@ export function mtable(element, targetParent, previousSibling, nextSibling, ance
   targetParent.elements.push(targetElement)
   return targetElement
 }
+
+export function mtd(element, targetParent, previousSibling, nextSibling, ancestors) {
+  // table cell
+  const targetElement = {
+    name: 'm:e',
+    type: 'element',
+    elements: []
+  }
+  targetParent.elements.push(targetElement)
+  return targetElement
+}
+
+export function mtr(element, targetParent, previousSibling, nextSibling, ancestors) {
+  // table row
+  const targetElement = {
+    name: 'm:mr',
+    type: 'element',
+    elements: []
+  }
+  targetParent.elements.push(targetElement)
+  return targetElement
+}

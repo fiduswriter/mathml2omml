@@ -1,7 +1,7 @@
 import {walker} from "../walker"
 import {getNary, getNaryTarget} from "../ooml"
 
-import {getTextContent} from "./text"
+import {getTextContent} from "./text_container"
 
 const UPPER_COMBINATION = {
   '\u2190': '\u20D6', // arrow left
@@ -26,14 +26,13 @@ const UPPER_COMBINATION = {
 }
 
 
-export function underOrOver(element, targetParent, previousSibling, nextSibling, ancestors) {
+function underOrOver(element, targetParent, previousSibling, nextSibling, ancestors, direction) {
   // Munder/Mover
 
   if (element.elements.length !== 2) {
     // treat as mrow
     return targetParent
   }
-  const direction = element.name === 'munder' ? 'under' : 'over'
 
   ancestors = [...ancestors]
   ancestors.unshift(element)
@@ -266,4 +265,13 @@ export function underOrOver(element, targetParent, previousSibling, nextSibling,
   })
   // Don't iterate over children in the usual way.
   return
+}
+
+
+export function munder(element, targetParent, previousSibling, nextSibling, ancestors) {
+  return underOrOver(element, targetParent, previousSibling, nextSibling, ancestors, 'under')
+}
+
+export function mover(element, targetParent, previousSibling, nextSibling, ancestors) {
+  return underOrOver(element, targetParent, previousSibling, nextSibling, ancestors, 'over')
 }
