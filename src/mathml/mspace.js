@@ -1,4 +1,4 @@
-export function mspace(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mspace (element, targetParent, previousSibling, nextSibling, ancestors) {
   targetParent.elements.push({
     name: 'm:r',
     type: 'element',
@@ -16,5 +16,4 @@ export function mspace(element, targetParent, previousSibling, nextSibling, ance
       ]
     }]
   })
-  return
 }

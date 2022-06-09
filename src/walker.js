@@ -1,7 +1,7 @@
-import {addScriptlevel} from "./ooml"
-import * as mathmlHandlers from "./mathml"
+import { addScriptlevel } from './ooml'
+import * as mathmlHandlers from './mathml'
 
-export function walker(element, targetParent, previousSibling=false, nextSibling=false, ancestors=[]) {
+export function walker (element, targetParent, previousSibling = false, nextSibling = false, ancestors = []) {
   if (!previousSibling && ['m:deg', 'm:den', 'm:e', 'm:fName', 'm:lim', 'm:num', 'm:sub', 'm:sup'].includes(targetParent.name)) {
     // We are walking through the first element within one of the
     // elements where an <m:argPr> might occur. The <m:argPr> can specify
@@ -22,8 +22,7 @@ export function walker(element, targetParent, previousSibling=false, nextSibling
       ancestors
     )
   } else {
-    if ((element.name || element.type))
-    {
+    if ((element.name || element.type)) {
       console.warn(`Type not supported: ${element.name || element.type}`)
     }
 
@@ -37,12 +36,12 @@ export function walker(element, targetParent, previousSibling=false, nextSibling
   if (element.elements?.length) {
     ancestors = [...ancestors]
     ancestors.unshift(element)
-    for (let i=0; i < element.elements.length;i++) {
+    for (let i = 0; i < element.elements.length; i++) {
       walker(
         element.elements[i],
         targetElement,
-        element.elements[i-1],
-        element.elements[i+1],
+        element.elements[i - 1],
+        element.elements[i + 1],
         ancestors
       )
     }

@@ -5,3 +5,4 @@ steps:
     node-version: 14
 - run: npm ci
 - run: npm test
+- run: npm run lint

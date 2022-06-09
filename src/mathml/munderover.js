@@ -1,7 +1,7 @@
-import {walker} from "../walker"
-import {getNary, getNaryTarget} from "../ooml"
+import { walker } from '../walker'
+import { getNary, getNaryTarget } from '../ooml'
 
-export function munderover(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function munderover (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Munderover
   if (element.elements.length !== 3) {
     // treat as mrow
@@ -55,7 +55,7 @@ export function munderover(element, targetParent, previousSibling, nextSibling, 
     )
     topTarget.elements.push(subscriptTarget)
     topTarget.elements.push(superscriptTarget)
-    topTarget.elements.push({type: 'element', name: 'm:e', elements:[]})
+    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
     targetParent.elements.push(topTarget)
     return
   }
@@ -86,7 +86,6 @@ export function munderover(element, targetParent, previousSibling, nextSibling, 
     type: 'element',
     elements: []
   }
-
 
   walker(
     underscript,
@@ -124,5 +123,4 @@ export function munderover(element, targetParent, previousSibling, nextSibling, 
     ]
   })
   // Don't iterate over children in the usual way.
-  return
 }

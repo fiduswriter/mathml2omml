@@ -1,6 +1,6 @@
-import {walker} from "../walker"
+import { walker } from '../walker'
 
-export function mmultiscripts(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mmultiscripts (element, targetParent, previousSibling, nextSibling, ancestors) {
   if (element.elements.length === 0) {
     // Don't use
     return
@@ -14,11 +14,9 @@ export function mmultiscripts(element, targetParent, previousSibling, nextSiblin
   const children = element.elements.slice(1)
   let dividerFound = false
   children.forEach((child, index) => {
-    if (child.name==='mprescripts') {
+    if (child.name === 'mprescripts') {
       dividerFound = true
-    } else if (child.name==='none') {
-      return
-    } else {
+    } else if (child.name !== 'none') {
       if (index % 2) {
         if (dividerFound) {
           preSubs.push(child)
@@ -150,9 +148,8 @@ export function mmultiscripts(element, targetParent, previousSibling, nextSiblin
         preSuperscriptTarget
       ]
     }
-  topTarget = topPreTarget
+    topTarget = topPreTarget
   }
   targetParent.elements.push(topTarget)
   // Don't iterate over children in the usual way.
-  return
 }

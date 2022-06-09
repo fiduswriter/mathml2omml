@@ -1,64 +1,64 @@
-import {getTextContent} from "./text_container"
+import { getTextContent } from './text_container'
 
-export function getStyle(element, ancestors, previousStyle = {}) {
+export function getStyle (element, ancestors, previousStyle = {}) {
   const elAttributes = element.attributes || {}
-  const color = elAttributes.mathcolor || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.color)?.attributes.color || ''
-  const minsize = parseFloat(elAttributes.scriptminsize || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.scriptminsize)?.attributes.scriptminsize || '8pt')
-  const sizemultiplier = parseFloat(elAttributes.scriptsizemultiplier || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.scriptsizemultiplier)?.attributes.scriptsizemultiplier || '0.71')
-  const size = elAttributes.mathsize || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.mathsize)?.attributes.mathsize || ''
-  const scriptlevel = elAttributes.scriptlevel || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.scriptlevel)?.attributes.scriptlevel || ''
-  const background = elAttributes.mathbackground || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.mathbackground)?.attributes.mathbackground || ''
-  let variant = elAttributes.mathvariant || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.mathvariant)?.attributes.mathvariant || ''
-  if (variant === "b-i") {
-    variant = "bold-italic"
+  const color = elAttributes.mathcolor || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.color)?.attributes.color || ''
+  // const minsize = parseFloat(elAttributes.scriptminsize || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.scriptminsize)?.attributes.scriptminsize || '8pt')
+  // const sizemultiplier = parseFloat(elAttributes.scriptsizemultiplier || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.scriptsizemultiplier)?.attributes.scriptsizemultiplier || '0.71')
+  const size = elAttributes.mathsize || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.mathsize)?.attributes.mathsize || ''
+  const scriptlevel = elAttributes.scriptlevel || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.scriptlevel)?.attributes.scriptlevel || ''
+  const background = elAttributes.mathbackground || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.mathbackground)?.attributes.mathbackground || ''
+  let variant = elAttributes.mathvariant || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.mathvariant)?.attributes.mathvariant || ''
+  if (variant === 'b-i') {
+    variant = 'bold-italic'
   }
-  const fontweight = elAttributes.fontweight || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.fontweight)?.attributes.fontweight || ''
-  if (fontweight === 'bold' && !["bold", "bold-italic"].includes(variant)) {
-    if (variant.includes("italic")) {
-      variant = "bold-italic"
+  const fontweight = elAttributes.fontweight || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.fontweight)?.attributes.fontweight || ''
+  if (fontweight === 'bold' && !['bold', 'bold-italic'].includes(variant)) {
+    if (variant.includes('italic')) {
+      variant = 'bold-italic'
     } else {
-      variant = "bold"
+      variant = 'bold'
     }
-  } else if (fontweight === "normal" && ["bold", "bold-italic"].includes(variant)) {
-    if (variant.includes("italic")) {
-      variant = "italic"
+  } else if (fontweight === 'normal' && ['bold', 'bold-italic'].includes(variant)) {
+    if (variant.includes('italic')) {
+      variant = 'italic'
     } else {
-      variant = ""
+      variant = ''
     }
   }
-  const fontstyle = elAttributes.fontstyle || ancestors.find(element => element.name==='mstyle' && element.attributes && element.attributes.fontstyle)?.attributes.fontstyle || ""
-  if (fontstyle === 'italic' && !["italic", "bold-italic"].includes(variant)) {
-    if (variant.includes("bold")) {
-      variant = "bold-italic"
+  const fontstyle = elAttributes.fontstyle || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.fontstyle)?.attributes.fontstyle || ''
+  if (fontstyle === 'italic' && !['italic', 'bold-italic'].includes(variant)) {
+    if (variant.includes('bold')) {
+      variant = 'bold-italic'
     } else {
-      variant = "italic"
+      variant = 'italic'
     }
-  } else if (fontstyle === "normal" && ["italic", "bold-italic"].includes(variant)) {
-    if (variant.includes("bold")) {
-      variant = "bold"
+  } else if (fontstyle === 'normal' && ['italic', 'bold-italic'].includes(variant)) {
+    if (variant.includes('bold')) {
+      variant = 'bold'
     } else {
-      variant = ""
+      variant = ''
     }
   }
   // Override variant for some types
   if (!elAttributes.mathvariant) {
     const textContent = getTextContent(element)
     if (
-      previousStyle.variant === "" &&
+      previousStyle.variant === '' &&
       (
-        (element.name === "mi" && textContent.length > 1) ||
-        (element.name === "mn" && !/^\d+\.\d+$/.test(textContent))
+        (element.name === 'mi' && textContent.length > 1) ||
+        (element.name === 'mn' && !/^\d+\.\d+$/.test(textContent))
       )
     ) {
-      variant = ""
+      variant = ''
     } else if (
-      ["mi", "mn", "mo"].includes(element.name) &&
-      ["italic", "bold-italic"].includes(previousStyle.variant)
+      ['mi', 'mn', 'mo'].includes(element.name) &&
+      ['italic', 'bold-italic'].includes(previousStyle.variant)
     ) {
-      if (fontweight === "bold") {
-        variant = "bold-italic"
+      if (fontweight === 'bold') {
+        variant = 'bold-italic'
       } else {
-        variant = "italic"
+        variant = 'italic'
       }
     }
   }
@@ -68,9 +68,7 @@ export function getStyle(element, ancestors, previousStyle = {}) {
     variant,
     size,
     scriptlevel,
-    variant,
     background,
     fontstyle
   }
-
 }

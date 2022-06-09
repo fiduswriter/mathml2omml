@@ -1,7 +1,7 @@
-import {walker} from "../walker"
-import {getNary, getNaryTarget} from "../ooml"
+import { walker } from '../walker'
+import { getNary, getNaryTarget } from '../ooml'
 
-export function msubsup(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function msubsup (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Sub + superscript
   if (element.elements.length !== 3) {
     // treat as mrow
@@ -89,9 +89,8 @@ export function msubsup(element, targetParent, previousSibling, nextSibling, anc
   topTarget.elements.push(subscriptTarget)
   topTarget.elements.push(superscriptTarget)
   if (element.isNary) {
-    topTarget.elements.push({type: 'element', name: 'm:e', elements:[]})
+    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
   }
   targetParent.elements.push(topTarget)
   // Don't iterate over children in the usual way.
-  return
 }

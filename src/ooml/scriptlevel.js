@@ -1,5 +1,5 @@
 
-export function addScriptlevel(target, ancestors) {
+export function addScriptlevel (target, ancestors) {
   const scriptlevel = ancestors.find(ancestor => ancestor.attributes?.scriptlevel)?.attributes?.scriptlevel
   if (['0', '1', '2'].includes(scriptlevel)) {
     target.elements.unshift({
@@ -8,7 +8,7 @@ export function addScriptlevel(target, ancestors) {
       elements: [{
         type: 'element',
         name: 'm:scrLvl',
-        attributes: {'m:val': scriptlevel}
+        attributes: { 'm:val': scriptlevel }
       }]
     })
   }

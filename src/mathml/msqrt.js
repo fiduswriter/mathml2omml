@@ -1,4 +1,4 @@
-export function msqrt(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function msqrt (element, targetParent, previousSibling, nextSibling, ancestors) {
   const targetElement = {
     name: 'm:e',
     type: 'element',

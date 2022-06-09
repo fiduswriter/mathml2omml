@@ -1,4 +1,4 @@
-export function mglyph(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mglyph (element, targetParent, previousSibling, nextSibling, ancestors) {
   // No support in omml. Output alt text.
   if (element.attributes && element.attributes.alt) {
     targetParent.elements.push({
@@ -6,5 +6,4 @@ export function mglyph(element, targetParent, previousSibling, nextSibling, ance
       text: element.attributes.alt
     })
   }
-  return
 }

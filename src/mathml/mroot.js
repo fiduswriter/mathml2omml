@@ -1,7 +1,7 @@
-import {walker} from "../walker"
-import {getTextContent} from "./text_container"
+import { walker } from '../walker'
+import { getTextContent } from './text_container'
 
-export function mroot(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mroot (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Root
   if (element.elements.length !== 2) {
     // treat as mrow
@@ -48,12 +48,11 @@ export function mroot(element, targetParent, previousSibling, nextSibling, ances
         type: 'element',
         name: 'm:radPr',
         elements: [
-          {type: 'element', name: 'm:degHide', attributes: {'m:val': rootText.length ? 'off' : 'on'}}
+          { type: 'element', name: 'm:degHide', attributes: { 'm:val': rootText.length ? 'off' : 'on' } }
         ]
       },
       rootTarget,
       baseTarget
     ]
   })
-  return
 }

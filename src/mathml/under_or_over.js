@@ -1,7 +1,7 @@
-import {walker} from "../walker"
-import {getNary, getNaryTarget} from "../ooml"
+import { walker } from '../walker'
+import { getNary, getNaryTarget } from '../ooml'
 
-import {getTextContent} from "./text_container"
+import { getTextContent } from './text_container'
 
 const UPPER_COMBINATION = {
   '\u2190': '\u20D6', // arrow left
@@ -11,7 +11,7 @@ const UPPER_COMBINATION = {
   '\u00B4': '\u0301', // accute
   '\u02DD': '\u030B', // accute, double
   '\u02D8': '\u0306', // breve
-  '\u02C7': '\u030C', // caron
+  ˇ: '\u030C', // caron
   '\u00B8': '\u0312', // cedilla
   '\u005E': '\u0302', // circumflex accent
   '\u00A8': '\u0308', // diaresis
@@ -22,11 +22,10 @@ const UPPER_COMBINATION = {
   '\u2212': '\u0305', // minus -> overline
   '\u002E': '\u0307', // period -> dot above
   '\u007E': '\u0303', // tilde
-  '\u02DC': '\u0303', // small tilde
+  '\u02DC': '\u0303' // small tilde
 }
 
-
-function underOrOver(element, targetParent, previousSibling, nextSibling, ancestors, direction) {
+function underOrOver (element, targetParent, previousSibling, nextSibling, ancestors, direction) {
   // Munder/Mover
 
   if (element.elements.length !== 2) {
@@ -36,7 +35,6 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
 
   ancestors = [...ancestors]
   ancestors.unshift(element)
-
 
   const base = element.elements[0]
   const script = element.elements[1]
@@ -57,7 +55,7 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
     element.attributes?.accent?.toLowerCase() !== 'true' &&
     element.attributes?.accentunder?.toLowerCase() !== 'true'
   ) {
-    const topTarget = getNaryTarget(naryChar, element, 'undOvr', direction==="over", direction==="under")
+    const topTarget = getNaryTarget(naryChar, element, 'undOvr', direction === 'over', direction === 'under')
     element.isNary = true
 
     const subscriptTarget = {
@@ -72,21 +70,17 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
     }
     walker(
       script,
-      direction === "under" ? subscriptTarget : superscriptTarget,
+      direction === 'under' ? subscriptTarget : superscriptTarget,
       false,
       false,
       ancestors
     )
     topTarget.elements.push(subscriptTarget)
     topTarget.elements.push(superscriptTarget)
-    topTarget.elements.push({type: 'element', name: 'm:e', elements:[]})
+    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
     targetParent.elements.push(topTarget)
     return
   }
-
-
-
-
 
   const scriptText = getTextContent(script)
 
@@ -102,7 +96,6 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
     false,
     ancestors
   )
-
 
   //
   // m:bar
@@ -136,7 +129,7 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
             type: 'element',
             name: 'm:pos',
             attributes: {
-              'm:val': direction === "under" ? "bot" : "top"
+              'm:val': direction === 'under' ? 'bot' : 'top'
             }
           }]
         },
@@ -145,17 +138,17 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
           name: 'm:e',
           elements: [{
             type: 'element',
-            name: direction === "under" ? 'm:sSub' : 'm:sSup',
+            name: direction === 'under' ? 'm:sSub' : 'm:sSup',
             elements: [
               {
                 type: 'element',
-                name: direction === "under" ? 'm:sSubPr' : 'm:sSupPr',
+                name: direction === 'under' ? 'm:sSubPr' : 'm:sSupPr',
                 elements: [
-                  {type: 'element', name: 'm:ctrlPr'}
+                  { type: 'element', name: 'm:ctrlPr' }
                 ]
               },
               baseTarget,
-              {type:'element', name: 'm:sub'}
+              { type: 'element', name: 'm:sub' }
             ]
           }]
         }
@@ -212,12 +205,12 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
   // 2. Script length is 1.
   // 3. No accent
   if (
-      element.attributes?.accent?.toLowerCase() !== 'true' &&
+    element.attributes?.accent?.toLowerCase() !== 'true' &&
       element.attributes?.accentunder?.toLowerCase() !== 'true' &&
       script.name === 'mo' &&
       base.name === 'mrow' &&
       scriptText.length === 1
-    ) {
+  ) {
     targetParent.elements.push({
       type: 'element',
       name: 'm:groupChr',
@@ -241,7 +234,6 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
   }
   // Fallback: m:lim
 
-
   const scriptTarget = {
     name: 'm:lim',
     type: 'element',
@@ -264,14 +256,12 @@ function underOrOver(element, targetParent, previousSibling, nextSibling, ancest
     ]
   })
   // Don't iterate over children in the usual way.
-  return
 }
 
-
-export function munder(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function munder (element, targetParent, previousSibling, nextSibling, ancestors) {
   return underOrOver(element, targetParent, previousSibling, nextSibling, ancestors, 'under')
 }
 
-export function mover(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mover (element, targetParent, previousSibling, nextSibling, ancestors) {
   return underOrOver(element, targetParent, previousSibling, nextSibling, ancestors, 'over')
 }

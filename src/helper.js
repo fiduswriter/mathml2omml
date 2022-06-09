@@ -1,11 +1,11 @@
-export function cleanText(element, options = {text: 'remove'}) {
-  switch(element.name) {
+export function cleanText (element, options = { text: 'remove' }) {
+  switch (element.name) {
     case 'mi':
     case 'mn':
     case 'mo':
     case 'ms':
     case 'mtext':
-      options = {text: 'trim'}
+      options = { text: 'trim' }
       break
     default:
       break
@@ -26,6 +26,4 @@ export function cleanText(element, options = {text: 'remove'}) {
       }
     })
   }
-
-
 }

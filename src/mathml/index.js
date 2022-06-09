@@ -1,18 +1,18 @@
-export {math, semantics} from "./math"
-export {menclose} from "./menclose"
-export {mfrac} from "./mfrac"
-export {mglyph} from "./mglyph"
-export {mmultiscripts} from "./mmultiscripts"
-export {mrow} from "./mrow"
-export {mspace} from "./mspace"
-export {msqrt} from "./msqrt"
-export {mstyle} from "./mstyle"
-export {msub} from "./msub"
-export {msubsup} from "./msubsup"
-export {msup} from "./msup"
-export {mtable, mtd, mtr} from "./table"
-export {munderover} from "./munderover"
-export {mtext, mi, mn, ms, mo, getTextContent} from "./text_container"
-export {munder, mover} from "./under_or_over"
-export {mroot} from "./mroot"
-export {text} from "./text"
+export { math, semantics } from './math'
+export { menclose } from './menclose'
+export { mfrac } from './mfrac'
+export { mglyph } from './mglyph'
+export { mmultiscripts } from './mmultiscripts'
+export { mrow } from './mrow'
+export { mspace } from './mspace'
+export { msqrt } from './msqrt'
+export { mstyle } from './mstyle'
+export { msub } from './msub'
+export { msubsup } from './msubsup'
+export { msup } from './msup'
+export { mtable, mtd, mtr } from './table'
+export { munderover } from './munderover'
+export { mtext, mi, mn, ms, mo, getTextContent } from './text_container'
+export { munder, mover } from './under_or_over'
+export { mroot } from './mroot'
+export { text } from './text'

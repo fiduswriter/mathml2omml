@@ -1,6 +1,6 @@
-import {walker} from "../walker"
+import { walker } from '../walker'
 
-export function mfrac(element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mfrac (element, targetParent, previousSibling, nextSibling, ancestors) {
   if (element.elements.length !== 2) {
     // treat as mrow
     return targetParent
@@ -34,7 +34,7 @@ export function mfrac(element, targetParent, previousSibling, nextSibling, ances
     false,
     ancestors
   )
-  const fracType = element.attributes?.linethickness === "0" ? "noBar" : "bar"
+  const fracType = element.attributes?.linethickness === '0' ? 'noBar' : 'bar'
   targetParent.elements.push({
     type: 'element',
     name: 'm:f',
@@ -57,5 +57,4 @@ export function mfrac(element, targetParent, previousSibling, nextSibling, ances
     ]
   })
   // Don't iterate over children in the usual way.
-  return
 }
