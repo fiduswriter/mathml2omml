@@ -1,4 +1,3 @@
-
 export function text (element, targetParent, previousSibling, nextSibling, ancestors) {
   let text = element.text.replace(/[\u2062]|[\u200B]/g, '')
   if (ancestors.find(element => ['mi', 'mn', 'mo'].includes(element.name))) {

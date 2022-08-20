@@ -1,4 +1,4 @@
-import { walker } from '../walker'
+import { walker } from '../walker.js'
 
 export function mmultiscripts (element, targetParent, previousSibling, nextSibling, ancestors) {
   if (element.elements.length === 0) {

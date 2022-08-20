@@ -1,4 +1,3 @@
-
 export function addScriptlevel (target, ancestors) {
   const scriptlevel = ancestors.find(ancestor => ancestor.attributes?.scriptlevel)?.attributes?.scriptlevel
   if (['0', '1', '2'].includes(scriptlevel)) {
