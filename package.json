@@ -26,7 +26,7 @@
   "dependencies": {
     "jest": "^28.1.0",
     "xml-formatter": "^2.6.1",
-    "xml-js": "^1.6.11"
+    "@netless/xml-js": "^1.6.15"
   },
   "devDependencies": {
     "eslint": "^8.17.0",

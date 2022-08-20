@@ -1,4 +1,4 @@
-import { xml2js, js2xml } from 'xml-js'
+import { xml2js, js2xml } from '@netless/xml-js'
 
 import { walker } from './walker.js'
 import { cleanText } from './helpers.js'

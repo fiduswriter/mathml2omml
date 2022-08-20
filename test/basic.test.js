@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'fs'
 import { extname, join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { xml2js, js2xml } from 'xml-js'
+import { xml2js, js2xml } from '@netless/xml-js'
 import format from 'xml-formatter'
 import {
   mml2ooml
