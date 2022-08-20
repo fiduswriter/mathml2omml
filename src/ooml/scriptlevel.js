@@ -1,13 +1,13 @@
 export function addScriptlevel (target, ancestors) {
-  const scriptlevel = ancestors.find(ancestor => ancestor.attributes?.scriptlevel)?.attributes?.scriptlevel
+  const scriptlevel = ancestors.find(ancestor => ancestor.attribs?.scriptlevel)?.attribs?.scriptlevel
   if (['0', '1', '2'].includes(scriptlevel)) {
-    target.elements.unshift({
-      type: 'element',
+    target.children.unshift({
+      type: 'tag',
       name: 'm:argPr',
-      elements: [{
-        type: 'element',
+      children: [{
+        type: 'tag',
         name: 'm:scrLvl',
-        attributes: { 'm:val': scriptlevel }
+        attribs: { 'm:val': scriptlevel }
       }]
     })
   }

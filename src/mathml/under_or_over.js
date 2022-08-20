@@ -28,7 +28,7 @@ const UPPER_COMBINATION = {
 function underOrOver (element, targetParent, previousSibling, nextSibling, ancestors, direction) {
   // Munder/Mover
 
-  if (element.elements.length !== 2) {
+  if (element.children.length !== 2) {
     // treat as mrow
     return targetParent
   }
@@ -36,8 +36,8 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
   ancestors = [...ancestors]
   ancestors.unshift(element)
 
-  const base = element.elements[0]
-  const script = element.elements[1]
+  const base = element.children[0]
+  const script = element.children[1]
 
   // Munder/Mover can be translated to ooml in different ways.
 
@@ -52,21 +52,21 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
 
   if (
     naryChar &&
-    element.attributes?.accent?.toLowerCase() !== 'true' &&
-    element.attributes?.accentunder?.toLowerCase() !== 'true'
+    element.attribs?.accent?.toLowerCase() !== 'true' &&
+    element.attribs?.accentunder?.toLowerCase() !== 'true'
   ) {
     const topTarget = getNaryTarget(naryChar, element, 'undOvr', direction === 'over', direction === 'under')
     element.isNary = true
 
     const subscriptTarget = {
       name: 'm:sub',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     const superscriptTarget = {
       name: 'm:sup',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     walker(
       script,
@@ -75,10 +75,10 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
       false,
       ancestors
     )
-    topTarget.elements.push(subscriptTarget)
-    topTarget.elements.push(superscriptTarget)
-    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
-    targetParent.elements.push(topTarget)
+    topTarget.children.push(subscriptTarget)
+    topTarget.children.push(superscriptTarget)
+    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
+    targetParent.children.push(topTarget)
     return
   }
 
@@ -86,8 +86,8 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
 
   const baseTarget = {
     name: 'm:e',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
   walker(
     base,
@@ -118,37 +118,37 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
     )
   ) {
     // m:bar
-    targetParent.elements.push({
-      type: 'element',
+    targetParent.children.push({
+      type: 'tag',
       name: 'm:bar',
-      elements: [
+      children: [
         {
-          type: 'element',
+          type: 'tag',
           name: 'm:barPr',
-          elements: [{
-            type: 'element',
+          children: [{
+            type: 'tag',
             name: 'm:pos',
-            attributes: {
+            attribs: {
               'm:val': direction === 'under' ? 'bot' : 'top'
             }
           }]
         },
         {
-          type: 'element',
+          type: 'tag',
           name: 'm:e',
-          elements: [{
-            type: 'element',
+          children: [{
+            type: 'tag',
             name: direction === 'under' ? 'm:sSub' : 'm:sSup',
-            elements: [
+            children: [
               {
-                type: 'element',
+                type: 'tag',
                 name: direction === 'under' ? 'm:sSubPr' : 'm:sSupPr',
-                elements: [
-                  { type: 'element', name: 'm:ctrlPr' }
+                children: [
+                  { type: 'tag', name: 'm:ctrlPr' }
                 ]
               },
               baseTarget,
-              { type: 'element', name: 'm:sub' }
+              { type: 'tag', name: 'm:sub' }
             ]
           }]
         }
@@ -166,29 +166,29 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
   if (
     (
       direction === 'under' &&
-      element.attributes?.accentunder?.toLowerCase() === 'true' &&
+      element.attribs?.accentunder?.toLowerCase() === 'true' &&
       script.name === 'mo' &&
       scriptText.length < 2
     ) ||
     (
       direction === 'over' &&
-      element.attributes?.accent?.toLowerCase() === 'true' &&
+      element.attribs?.accent?.toLowerCase() === 'true' &&
       script.name === 'mo' &&
       scriptText.length < 2
     )
   ) {
     // m:acc
-    targetParent.elements.push({
-      type: 'element',
+    targetParent.children.push({
+      type: 'tag',
       name: 'm:acc',
-      elements: [
+      children: [
         {
-          type: 'element',
+          type: 'tag',
           name: 'm:accPr',
-          elements: [{
-            type: 'element',
+          children: [{
+            type: 'tag',
             name: 'm:chr',
-            attributes: {
+            attribs: {
               'm:val': UPPER_COMBINATION[scriptText] || scriptText
             }
           }]
@@ -205,23 +205,23 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
   // 2. Script length is 1.
   // 3. No accent
   if (
-    element.attributes?.accent?.toLowerCase() !== 'true' &&
-      element.attributes?.accentunder?.toLowerCase() !== 'true' &&
+    element.attribs?.accent?.toLowerCase() !== 'true' &&
+      element.attribs?.accentunder?.toLowerCase() !== 'true' &&
       script.name === 'mo' &&
       base.name === 'mrow' &&
       scriptText.length === 1
   ) {
-    targetParent.elements.push({
-      type: 'element',
+    targetParent.children.push({
+      type: 'tag',
       name: 'm:groupChr',
-      elements: [
+      children: [
         {
-          type: 'element',
+          type: 'tag',
           name: 'm:groupChrPr',
-          elements: [{
-            type: 'element',
+          children: [{
+            type: 'tag',
             name: 'm:chr',
-            attributes: {
+            attribs: {
               'm:val': scriptText,
               'm:pos': direction === 'under' ? 'bot' : 'top'
             }
@@ -236,8 +236,8 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
 
   const scriptTarget = {
     name: 'm:lim',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
 
   walker(
@@ -247,10 +247,10 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
     false,
     ancestors
   )
-  targetParent.elements.push({
-    type: 'element',
+  targetParent.children.push({
+    type: 'tag',
     name: direction === 'under' ? 'm:limLow' : 'm:limUpp',
-    elements: [
+    children: [
       baseTarget,
       scriptTarget
     ]

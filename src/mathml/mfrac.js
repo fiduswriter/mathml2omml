@@ -1,22 +1,22 @@
 import { walker } from '../walker.js'
 
 export function mfrac (element, targetParent, previousSibling, nextSibling, ancestors) {
-  if (element.elements.length !== 2) {
+  if (element.children.length !== 2) {
     // treat as mrow
     return targetParent
   }
 
-  const numerator = element.elements[0]
-  const denumerator = element.elements[1]
+  const numerator = element.children[0]
+  const denumerator = element.children[1]
   const numeratorTarget = {
     name: 'm:num',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
   const denumeratorTarget = {
     name: 'm:den',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
   ancestors = [...ancestors]
   ancestors.unshift(element)
@@ -34,19 +34,19 @@ export function mfrac (element, targetParent, previousSibling, nextSibling, ance
     false,
     ancestors
   )
-  const fracType = element.attributes?.linethickness === '0' ? 'noBar' : 'bar'
-  targetParent.elements.push({
-    type: 'element',
+  const fracType = element.attribs?.linethickness === '0' ? 'noBar' : 'bar'
+  targetParent.children.push({
+    type: 'tag',
     name: 'm:f',
-    elements: [
+    children: [
       {
-        type: 'element',
+        type: 'tag',
         name: 'm:fPr',
-        elements: [
+        children: [
           {
-            type: 'element',
+            type: 'tag',
             name: 'm:type',
-            attributes: {
+            attribs: {
               'm:val': fracType
             }
           }

@@ -8,11 +8,11 @@ const STYLES = {
 
 function textContainer (element, targetParent, previousSibling, nextSibling, ancestors, textType) {
   if (previousSibling.isNary) {
-    const previousSiblingTarget = targetParent.elements[targetParent.elements.length - 1]
-    targetParent = previousSiblingTarget.elements[previousSiblingTarget.elements.length - 1]
+    const previousSiblingTarget = targetParent.children[targetParent.children.length - 1]
+    targetParent = previousSiblingTarget.children[previousSiblingTarget.children.length - 1]
   }
 
-  const hasMglyphChild = element.elements && element.elements.find(element => element.name === 'mglyph')
+  const hasMglyphChild = element.children && element.children.find(element => element.name === 'mglyph')
   const style = getStyle(element, ancestors, previousSibling?.style)
   element.style = style // Add it to element to make it comparable
   element.hasMglyphChild = hasMglyphChild
@@ -27,53 +27,53 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
   )
   let targetElement
   if (sameGroup && styleSame && !hasMglyphChild) {
-    const rElement = targetParent.elements[targetParent.elements.length - 1]
-    targetElement = rElement.elements[rElement.elements.length - 1]
+    const rElement = targetParent.children[targetParent.children.length - 1]
+    targetElement = rElement.children[rElement.children.length - 1]
   } else {
     const rElement = {
       name: 'm:r',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
 
     if (style.variant) {
       const wrPr = {
         name: 'w:rPr',
-        type: 'element',
-        elements: []
+        type: 'tag',
+        children: []
       }
       if (style.variant.includes('bold')) {
-        wrPr.elements.push({ name: 'w:b', type: 'element' })
+        wrPr.children.push({ name: 'w:b', type: 'tag' })
       }
       if (style.variant.includes('italic')) {
-        wrPr.elements.push({ name: 'w:i', type: 'element' })
+        wrPr.children.push({ name: 'w:i', type: 'tag' })
       }
-      rElement.elements.push(wrPr)
+      rElement.children.push(wrPr)
       const mrPr = {
         name: 'm:rPr',
-        type: 'element',
-        elements: [{
+        type: 'tag',
+        children: [{
           name: 'm:nor',
-          type: 'element'
+          type: 'tag'
         }]
       }
       if (style.variant !== 'italic') {
-        mrPr.elements.push({
+        mrPr.children.push({
           name: 'm:sty',
-          type: 'element',
-          attributes: {
+          type: 'tag',
+          attribs: {
             'm:val': STYLES[style.variant]
           }
         })
       }
-      rElement.elements.push(mrPr)
+      rElement.children.push(mrPr)
     } else if (hasMglyphChild || textType === 'mtext') {
-      rElement.elements.push({
+      rElement.children.push({
         name: 'm:rPr',
-        type: 'element',
-        elements: [{
+        type: 'tag',
+        children: [{
           name: 'm:nor',
-          type: 'element'
+          type: 'tag'
         }]
       })
     } else if (
@@ -83,27 +83,27 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
         style.fontstyle === ''
       )
     ) {
-      rElement.elements.push({
+      rElement.children.push({
         name: 'm:rPr',
-        type: 'element',
-        elements: [{
+        type: 'tag',
+        children: [{
           name: 'm:sty',
-          type: 'element',
-          attributes: { 'm:val': 'p' }
+          type: 'tag',
+          attribs: { 'm:val': 'p' }
         }]
       })
     }
 
     targetElement = {
       name: 'm:t',
-      type: 'element',
-      attributes: {
+      type: 'tag',
+      attribs: {
         'xml:space': 'preserve'
       },
-      elements: []
+      children: []
     }
-    rElement.elements.push(targetElement)
-    targetParent.elements.push(rElement)
+    rElement.children.push(targetElement)
+    targetParent.children.push(rElement)
   }
   return targetElement
 }

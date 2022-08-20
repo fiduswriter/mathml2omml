@@ -3,14 +3,14 @@ import { getNary, getNaryTarget } from '../ooml/index.js'
 
 export function msup (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Superscript
-  if (element.elements.length !== 2) {
+  if (element.children.length !== 2) {
     // treat as mrow
     return targetParent
   }
   ancestors = [...ancestors]
   ancestors.unshift(element)
-  const base = element.elements[0]
-  const superscript = element.elements[1]
+  const base = element.children[0]
+  const superscript = element.children[1]
 
   let topTarget
   //
@@ -22,17 +22,17 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
   const naryChar = getNary(base)
   if (
     naryChar &&
-    element.attributes?.accent?.toLowerCase() !== 'true' &&
-    element.attributes?.accentunder?.toLowerCase() !== 'true'
+    element.attribs?.accent?.toLowerCase() !== 'true' &&
+    element.attribs?.accentunder?.toLowerCase() !== 'true'
   ) {
     topTarget = getNaryTarget(naryChar, element, 'subSup', true)
     element.isNary = true
-    topTarget.elements.push({ type: 'element', name: 'm:sub' })
+    topTarget.children.push({ type: 'tag', name: 'm:sub' })
   } else {
     const baseTarget = {
       name: 'm:e',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     walker(
       base,
@@ -43,14 +43,14 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
     )
 
     topTarget = {
-      type: 'element',
+      type: 'tag',
       name: 'm:sSup',
-      elements: [
+      children: [
         {
-          type: 'element',
+          type: 'tag',
           name: 'm:sSupPr',
-          elements: [{
-            type: 'element',
+          children: [{
+            type: 'tag',
             name: 'm:ctrlPr'
           }]
         },
@@ -61,8 +61,8 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
 
   const superscriptTarget = {
     name: 'm:sup',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
 
   walker(
@@ -73,10 +73,10 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
     ancestors
   )
 
-  topTarget.elements.push(superscriptTarget)
+  topTarget.children.push(superscriptTarget)
   if (element.isNary) {
-    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
+    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
   }
-  targetParent.elements.push(topTarget)
+  targetParent.children.push(topTarget)
   // Don't iterate over children in the usual way.
 }

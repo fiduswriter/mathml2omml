@@ -3,14 +3,14 @@ import { getNary, getNaryTarget } from '../ooml/index.js'
 
 export function msub (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Subscript
-  if (element.elements.length !== 2) {
+  if (element.children.length !== 2) {
     // treat as mrow
     return targetParent
   }
   ancestors = [...ancestors]
   ancestors.unshift(element)
-  const base = element.elements[0]
-  const subscript = element.elements[1]
+  const base = element.children[0]
+  const subscript = element.children[1]
 
   let topTarget
   //
@@ -22,16 +22,16 @@ export function msub (element, targetParent, previousSibling, nextSibling, ances
   const naryChar = getNary(base)
   if (
     naryChar &&
-    element.attributes?.accent?.toLowerCase() !== 'true' &&
-    element.attributes?.accentunder?.toLowerCase() !== 'true'
+    element.attribs?.accent?.toLowerCase() !== 'true' &&
+    element.attribs?.accentunder?.toLowerCase() !== 'true'
   ) {
     topTarget = getNaryTarget(naryChar, element, 'subSup', false, true)
     element.isNary = true
   } else {
     const baseTarget = {
       name: 'm:e',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     walker(
       base,
@@ -41,14 +41,14 @@ export function msub (element, targetParent, previousSibling, nextSibling, ances
       ancestors
     )
     topTarget = {
-      type: 'element',
+      type: 'tag',
       name: 'm:sSub',
-      elements: [
+      children: [
         {
-          type: 'element',
+          type: 'tag',
           name: 'm:sSubPr',
-          elements: [{
-            type: 'element',
+          children: [{
+            type: 'tag',
             name: 'm:ctrlPr'
           }]
         },
@@ -59,8 +59,8 @@ export function msub (element, targetParent, previousSibling, nextSibling, ances
 
   const subscriptTarget = {
     name: 'm:sub',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
 
   walker(
@@ -70,11 +70,11 @@ export function msub (element, targetParent, previousSibling, nextSibling, ances
     false,
     ancestors
   )
-  topTarget.elements.push(subscriptTarget)
+  topTarget.children.push(subscriptTarget)
   if (element.isNary) {
-    topTarget.elements.push({ type: 'element', name: 'm:sup' })
-    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
+    topTarget.children.push({ type: 'tag', name: 'm:sup' })
+    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
   }
-  targetParent.elements.push(topTarget)
+  targetParent.children.push(topTarget)
   // Don't iterate over children in the usual way.
 }

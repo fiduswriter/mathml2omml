@@ -1,10 +1,10 @@
 export function math (element, targetParent, previousSibling, nextSibling, ancestors) {
   targetParent.name = 'm:oMath'
-  targetParent.attributes = {
+  targetParent.attribs = {
     'xmlns:m': 'http://schemas.openxmlformats.org/officeDocument/2006/math'
   }
-  targetParent.type = 'element'
-  targetParent.elements = []
+  targetParent.type = 'tag'
+  targetParent.children = []
   return targetParent
 }
 

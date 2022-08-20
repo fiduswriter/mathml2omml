@@ -5,14 +5,14 @@ export function text (element, targetParent, previousSibling, nextSibling, ances
   } else {
     const ms = ancestors.find(element => element.name === 'ms')
     if (ms) {
-      text = (ms.attributes?.lquote || '"') + text + (ms.attributes?.rquote || '"')
+      text = (ms.attribs?.lquote || '"') + text + (ms.attribs?.rquote || '"')
     }
   }
   if (text.length) {
-    if (targetParent.elements.length && targetParent.elements[targetParent.elements.length - 1].type === 'text') {
-      targetParent.elements[targetParent.elements.length - 1].text += text
+    if (targetParent.children.length && targetParent.children[targetParent.children.length - 1].type === 'text') {
+      targetParent.children[targetParent.children.length - 1].text += text
     } else {
-      targetParent.elements.push({
+      targetParent.children.push({
         type: 'text',
         text
       })

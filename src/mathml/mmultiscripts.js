@@ -1,17 +1,17 @@
 import { walker } from '../walker.js'
 
 export function mmultiscripts (element, targetParent, previousSibling, nextSibling, ancestors) {
-  if (element.elements.length === 0) {
+  if (element.children.length === 0) {
     // Don't use
     return
   }
 
-  const base = element.elements[0]
+  const base = element.children[0]
   const postSubs = []
   const postSupers = []
   const preSubs = []
   const preSupers = []
-  const children = element.elements.slice(1)
+  const children = element.children.slice(1)
   let dividerFound = false
   children.forEach((child, index) => {
     if (child.name === 'mprescripts') {
@@ -35,7 +35,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
   ancestors = [...ancestors]
   ancestors.unshift(element)
   const tempTarget = {
-    elements: []
+    children: []
   }
   walker(
     base,
@@ -44,13 +44,13 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     false,
     ancestors
   )
-  let topTarget = tempTarget.elements[0]
+  let topTarget = tempTarget.children[0]
 
   if (postSubs.length || postSupers.length) {
     const subscriptTarget = {
       name: 'm:sub',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     postSubs.forEach(
       subscript => walker(
@@ -64,8 +64,8 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
 
     const superscriptTarget = {
       name: 'm:sup',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
 
     postSupers.forEach(
@@ -79,25 +79,25 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     )
 
     const topPostTarget = {
-      type: 'element',
-      elements: [{
-        type: 'element',
+      type: 'tag',
+      children: [{
+        type: 'tag',
         name: 'm:e',
-        elements: [
+        children: [
           topTarget
         ]
       }]
     }
     if (postSubs.length && postSupers.length) {
       topPostTarget.name = 'm:sSubSup'
-      topPostTarget.elements.push(subscriptTarget)
-      topPostTarget.elements.push(superscriptTarget)
+      topPostTarget.children.push(subscriptTarget)
+      topPostTarget.children.push(superscriptTarget)
     } else if (postSubs.length) {
       topPostTarget.name = 'm:sSub'
-      topPostTarget.elements.push(subscriptTarget)
+      topPostTarget.children.push(subscriptTarget)
     } else {
       topPostTarget.name = 'm:sSup'
-      topPostTarget.elements.push(superscriptTarget)
+      topPostTarget.children.push(superscriptTarget)
     }
     topTarget = topPostTarget
   }
@@ -105,8 +105,8 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
   if (preSubs.length || preSupers.length) {
     const preSubscriptTarget = {
       name: 'm:sub',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     preSubs.forEach(
       subscript => walker(
@@ -120,8 +120,8 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
 
     const preSuperscriptTarget = {
       name: 'm:sup',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
 
     preSupers.forEach(
@@ -135,12 +135,12 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     )
     const topPreTarget = {
       name: 'm:sPre',
-      type: 'element',
-      elements: [
+      type: 'tag',
+      children: [
         {
           name: 'm:e',
-          type: 'element',
-          elements: [
+          type: 'tag',
+          children: [
             topTarget
           ]
         },
@@ -150,6 +150,6 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     }
     topTarget = topPreTarget
   }
-  targetParent.elements.push(topTarget)
+  targetParent.children.push(topTarget)
   // Don't iterate over children in the usual way.
 }

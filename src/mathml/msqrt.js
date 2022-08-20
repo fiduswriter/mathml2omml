@@ -1,21 +1,21 @@
 export function msqrt (element, targetParent, previousSibling, nextSibling, ancestors) {
   const targetElement = {
     name: 'm:e',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
-  targetParent.elements.push({
+  targetParent.children.push({
     name: 'm:rad',
-    type: 'element',
-    elements: [
+    type: 'tag',
+    children: [
       {
         name: 'm:radPr',
-        type: 'element',
-        elements: [
+        type: 'tag',
+        children: [
           {
             name: 'm:degHide',
-            type: 'element',
-            attributes: {
+            type: 'tag',
+            attribs: {
               'm:val': 'on'
             }
           }
@@ -23,7 +23,7 @@ export function msqrt (element, targetParent, previousSibling, nextSibling, ance
       },
       {
         name: 'm:deg',
-        type: 'element'
+        type: 'tag'
       },
       targetElement
     ]

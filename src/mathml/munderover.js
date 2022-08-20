@@ -3,7 +3,7 @@ import { getNary, getNaryTarget } from '../ooml/index.js'
 
 export function munderover (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Munderover
-  if (element.elements.length !== 3) {
+  if (element.children.length !== 3) {
     // treat as mrow
     return targetParent
   }
@@ -11,9 +11,9 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
   ancestors = [...ancestors]
   ancestors.unshift(element)
 
-  const base = element.elements[0]
-  const underscript = element.elements[1]
-  const overscript = element.elements[2]
+  const base = element.children[0]
+  const underscript = element.children[1]
+  const overscript = element.children[2]
 
   //
   // m:nAry
@@ -31,13 +31,13 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
     element.isNary = true
     const subscriptTarget = {
       name: 'm:sub',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     const superscriptTarget = {
       name: 'm:sup',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
     walker(
       underscript,
@@ -53,10 +53,10 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
       false,
       ancestors
     )
-    topTarget.elements.push(subscriptTarget)
-    topTarget.elements.push(superscriptTarget)
-    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
-    targetParent.elements.push(topTarget)
+    topTarget.children.push(subscriptTarget)
+    topTarget.children.push(superscriptTarget)
+    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
+    targetParent.children.push(topTarget)
     return
   }
 
@@ -64,8 +64,8 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
 
   const baseTarget = {
     name: 'm:e',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
 
   walker(
@@ -78,13 +78,13 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
 
   const underscriptTarget = {
     name: 'm:lim',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
   const overscriptTarget = {
     name: 'm:lim',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
 
   walker(
@@ -101,18 +101,18 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
     false,
     ancestors
   )
-  targetParent.elements.push({
-    type: 'element',
+  targetParent.children.push({
+    type: 'tag',
     name: 'm:limUpp',
-    elements: [
+    children: [
       {
-        type: 'element',
+        type: 'tag',
         name: 'm:e',
-        elements: [
+        children: [
           {
-            type: 'element',
+            type: 'tag',
             name: 'm:limLow',
-            elements: [
+            children: [
               baseTarget,
               underscriptTarget
             ]

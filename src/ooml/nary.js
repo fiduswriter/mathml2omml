@@ -14,20 +14,20 @@ export function getNary (node) {
 }
 
 export function getNaryTarget (naryChar, element, type, subHide = false, supHide = false) {
-  const stretchy = element.attributes?.stretchy
+  const stretchy = element.attribs?.stretchy
   const grow = stretchy === 'true' ? 1 : stretchy === 'false' ? 0 : GROW_REGEXP.test(naryChar) ? 1 : 0
   return {
-    type: 'element',
+    type: 'tag',
     name: 'm:nary',
-    elements: [{
-      type: 'element',
+    children: [{
+      type: 'tag',
       name: 'm:naryPr',
-      elements: [
-        { type: 'element', name: 'm:chr', attributes: { 'm:val': naryChar } },
-        { type: 'element', name: 'm:limLoc', attributes: { 'm:val': type } },
-        { type: 'element', name: 'm:grow', attributes: { 'm:val': grow } },
-        { type: 'element', name: 'm:subHide', attributes: { 'm:val': subHide ? 'on' : 'off' } },
-        { type: 'element', name: 'm:supHide', attributes: { 'm:val': supHide ? 'on' : 'off' } }
+      children: [
+        { type: 'tag', name: 'm:chr', attribs: { 'm:val': naryChar } },
+        { type: 'tag', name: 'm:limLoc', attribs: { 'm:val': type } },
+        { type: 'tag', name: 'm:grow', attribs: { 'm:val': grow } },
+        { type: 'tag', name: 'm:subHide', attribs: { 'm:val': subHide ? 'on' : 'off' } },
+        { type: 'tag', name: 'm:supHide', attribs: { 'm:val': supHide ? 'on' : 'off' } }
       ]
     }]
   }

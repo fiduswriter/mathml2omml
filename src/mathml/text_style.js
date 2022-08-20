@@ -1,18 +1,18 @@
 import { getTextContent } from '../helpers.js'
 
 export function getStyle (element, ancestors, previousStyle = {}) {
-  const elAttributes = element.attributes || {}
-  const color = elAttributes.mathcolor || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.color)?.attributes.color || ''
-  // const minsize = parseFloat(elAttributes.scriptminsize || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.scriptminsize)?.attributes.scriptminsize || '8pt')
-  // const sizemultiplier = parseFloat(elAttributes.scriptsizemultiplier || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.scriptsizemultiplier)?.attributes.scriptsizemultiplier || '0.71')
-  const size = elAttributes.mathsize || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.mathsize)?.attributes.mathsize || ''
-  const scriptlevel = elAttributes.scriptlevel || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.scriptlevel)?.attributes.scriptlevel || ''
-  const background = elAttributes.mathbackground || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.mathbackground)?.attributes.mathbackground || ''
-  let variant = elAttributes.mathvariant || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.mathvariant)?.attributes.mathvariant || ''
+  const elAttributes = element.attribs || {}
+  const color = elAttributes.mathcolor || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.color)?.attribs.color || ''
+  // const minsize = parseFloat(elAttributes.scriptminsize || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.scriptminsize)?.attribs.scriptminsize || '8pt')
+  // const sizemultiplier = parseFloat(elAttributes.scriptsizemultiplier || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.scriptsizemultiplier)?.attribs.scriptsizemultiplier || '0.71')
+  const size = elAttributes.mathsize || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.mathsize)?.attribs.mathsize || ''
+  const scriptlevel = elAttributes.scriptlevel || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.scriptlevel)?.attribs.scriptlevel || ''
+  const background = elAttributes.mathbackground || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.mathbackground)?.attribs.mathbackground || ''
+  let variant = elAttributes.mathvariant || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.mathvariant)?.attribs.mathvariant || ''
   if (variant === 'b-i') {
     variant = 'bold-italic'
   }
-  const fontweight = elAttributes.fontweight || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.fontweight)?.attributes.fontweight || ''
+  const fontweight = elAttributes.fontweight || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.fontweight)?.attribs.fontweight || ''
   if (fontweight === 'bold' && !['bold', 'bold-italic'].includes(variant)) {
     if (variant.includes('italic')) {
       variant = 'bold-italic'
@@ -26,7 +26,7 @@ export function getStyle (element, ancestors, previousStyle = {}) {
       variant = ''
     }
   }
-  const fontstyle = elAttributes.fontstyle || ancestors.find(element => element.name === 'mstyle' && element.attributes && element.attributes.fontstyle)?.attributes.fontstyle || ''
+  const fontstyle = elAttributes.fontstyle || ancestors.find(element => element.name === 'mstyle' && element.attribs && element.attribs.fontstyle)?.attribs.fontstyle || ''
   if (fontstyle === 'italic' && !['italic', 'bold-italic'].includes(variant)) {
     if (variant.includes('bold')) {
       variant = 'bold-italic'

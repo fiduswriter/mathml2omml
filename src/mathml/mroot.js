@@ -3,19 +3,19 @@ import { getTextContent } from '../helpers.js'
 
 export function mroot (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Root
-  if (element.elements.length !== 2) {
+  if (element.children.length !== 2) {
     // treat as mrow
     return targetParent
   }
   ancestors = [...ancestors]
   ancestors.unshift(element)
-  const base = element.elements[0]
-  const root = element.elements[1]
+  const base = element.children[0]
+  const root = element.children[1]
 
   const baseTarget = {
-    type: 'element',
+    type: 'tag',
     name: 'm:e',
-    elements: []
+    children: []
   }
   walker(
     base,
@@ -26,9 +26,9 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
   )
 
   const rootTarget = {
-    type: 'element',
+    type: 'tag',
     name: 'm:deg',
-    elements: []
+    children: []
   }
   walker(
     root,
@@ -40,15 +40,15 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
 
   const rootText = getTextContent(root)
 
-  targetParent.elements.push({
-    type: 'element',
+  targetParent.children.push({
+    type: 'tag',
     name: 'm:rad',
-    elements: [
+    children: [
       {
-        type: 'element',
+        type: 'tag',
         name: 'm:radPr',
-        elements: [
-          { type: 'element', name: 'm:degHide', attributes: { 'm:val': rootText.length ? 'off' : 'on' } }
+        children: [
+          { type: 'tag', name: 'm:degHide', attribs: { 'm:val': rootText.length ? 'off' : 'on' } }
         ]
       },
       rootTarget,

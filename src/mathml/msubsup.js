@@ -3,7 +3,7 @@ import { getNary, getNaryTarget } from '../ooml/index.js'
 
 export function msubsup (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Sub + superscript
-  if (element.elements.length !== 3) {
+  if (element.children.length !== 3) {
     // treat as mrow
     return targetParent
   }
@@ -11,9 +11,9 @@ export function msubsup (element, targetParent, previousSibling, nextSibling, an
   ancestors = [...ancestors]
   ancestors.unshift(element)
 
-  const base = element.elements[0]
-  const subscript = element.elements[1]
-  const superscript = element.elements[2]
+  const base = element.children[0]
+  const subscript = element.children[1]
+  const superscript = element.children[2]
 
   let topTarget
   //
@@ -25,8 +25,8 @@ export function msubsup (element, targetParent, previousSibling, nextSibling, an
   const naryChar = getNary(base)
   if (
     naryChar &&
-    element.attributes?.accent?.toLowerCase() !== 'true' &&
-    element.attributes?.accentunder?.toLowerCase() !== 'true'
+    element.attribs?.accent?.toLowerCase() !== 'true' &&
+    element.attribs?.accentunder?.toLowerCase() !== 'true'
   ) {
     topTarget = getNaryTarget(naryChar, element, 'subSup')
     element.isNary = true
@@ -34,8 +34,8 @@ export function msubsup (element, targetParent, previousSibling, nextSibling, an
     // fallback: m:sSubSup
     const baseTarget = {
       name: 'm:e',
-      type: 'element',
-      elements: []
+      type: 'tag',
+      children: []
     }
 
     walker(
@@ -46,14 +46,14 @@ export function msubsup (element, targetParent, previousSibling, nextSibling, an
       ancestors
     )
     topTarget = {
-      type: 'element',
+      type: 'tag',
       name: 'm:sSubSup',
-      elements: [
+      children: [
         {
-          type: 'element',
+          type: 'tag',
           name: 'm:sSubSupPr',
-          elements: [{
-            type: 'element',
+          children: [{
+            type: 'tag',
             name: 'm:ctrlPr'
           }]
         },
@@ -64,13 +64,13 @@ export function msubsup (element, targetParent, previousSibling, nextSibling, an
 
   const subscriptTarget = {
     name: 'm:sub',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
   const superscriptTarget = {
     name: 'm:sup',
-    type: 'element',
-    elements: []
+    type: 'tag',
+    children: []
   }
   walker(
     subscript,
@@ -86,11 +86,11 @@ export function msubsup (element, targetParent, previousSibling, nextSibling, an
     false,
     ancestors
   )
-  topTarget.elements.push(subscriptTarget)
-  topTarget.elements.push(superscriptTarget)
+  topTarget.children.push(subscriptTarget)
+  topTarget.children.push(superscriptTarget)
   if (element.isNary) {
-    topTarget.elements.push({ type: 'element', name: 'm:e', elements: [] })
+    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
   }
-  targetParent.elements.push(topTarget)
+  targetParent.children.push(topTarget)
   // Don't iterate over children in the usual way.
 }

@@ -31,8 +31,8 @@ for (const fixture of mathfiles) {
     continue
   }
   const ofixture = fixture.slice(0, -4) + '.omml'
-  const mml = readFileSync(fixture)
-  const omml = existsSync(ofixture) ? readFileSync(ofixture) : false
+  const mml = readFileSync(fixture, 'utf8')
+  const omml = existsSync(ofixture) ? readFileSync(ofixture, 'utf8') : false
   examples.push({ fixture: fixture.slice(fixtures.length + 1), mml, omml })
 }
 
