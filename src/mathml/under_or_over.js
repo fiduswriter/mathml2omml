@@ -1,7 +1,7 @@
-import { walker } from '../walker'
-import { getNary, getNaryTarget } from '../ooml'
+import { walker } from '../walker.js'
+import { getNary, getNaryTarget } from '../ooml/index.js'
 
-import { getTextContent } from '../helpers'
+import { getTextContent } from '../helpers.js'
 
 const UPPER_COMBINATION = {
   '\u2190': '\u20D6', // arrow left

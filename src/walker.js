@@ -1,5 +1,5 @@
-import { addScriptlevel } from './ooml'
-import * as mathmlHandlers from './mathml'
+import { addScriptlevel } from './ooml/index.js'
+import * as mathmlHandlers from './mathml/index.js'
 
 export function walker (element, targetParent, previousSibling = false, nextSibling = false, ancestors = []) {
   if (!previousSibling && ['m:deg', 'm:den', 'm:e', 'm:fName', 'm:lim', 'm:num', 'm:sub', 'm:sup'].includes(targetParent.name)) {

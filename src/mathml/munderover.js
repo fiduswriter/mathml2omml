@@ -1,5 +1,5 @@
-import { walker } from '../walker'
-import { getNary, getNaryTarget } from '../ooml'
+import { walker } from '../walker.js'
+import { getNary, getNaryTarget } from '../ooml/index.js'
 
 export function munderover (element, targetParent, previousSibling, nextSibling, ancestors) {
   // Munderover

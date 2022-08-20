@@ -1,4 +1,4 @@
-import { getTextContent } from '../helpers'
+import { getTextContent } from '../helpers.js'
 
 export function getStyle (element, ancestors, previousStyle = {}) {
   const elAttributes = element.attributes || {}

@@ -1,4 +1,4 @@
-import { getStyle } from './text_style'
+import { getStyle } from './text_style.js'
 
 const STYLES = {
   bold: 'b',

@@ -1,4 +1,4 @@
-import { getTextContent } from '../helpers'
+import { getTextContent } from '../helpers.js'
 
 const NARY_REGEXP = /^[\u220f-\u2211]|[\u2229-\u2233]|[\u22c0-\u22c3]$/
 const GROW_REGEXP = /^\u220f|\u2211|[\u2229-\u222b]|\u222e|\u222f|\u2232|\u2233|[\u22c0-\u22c3]$/

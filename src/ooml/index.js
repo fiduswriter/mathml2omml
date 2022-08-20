@@ -1,2 +1,2 @@
-export { getNary, getNaryTarget } from './nary'
-export { addScriptlevel } from './scriptlevel'
+export { getNary, getNaryTarget } from './nary.js'
+export { addScriptlevel } from './scriptlevel.js'
