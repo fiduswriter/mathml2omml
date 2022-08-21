@@ -5,7 +5,7 @@ Convert MathML to the OOML format used in DOCX files without XSLT.
 You can use it like this:
 
 ```js
-import {mml2ooml} from "mathml2omml"
+import {mml2omml} from "mathml2omml"
 
 const mml = '<math xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics>

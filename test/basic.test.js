@@ -3,7 +3,7 @@ import { extname, join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import format from 'xml-formatter'
 import {
-  mml2ooml
+  mml2omml
 } from '../src/index.js'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -36,7 +36,7 @@ for (const fixture of mathfiles) {
 }
 
 test.each(examples)('Can produce OOML from $fixture', ({ fixture, mml, omml }) => {
-  const outOmml = format(mml2ooml(mml))
+  const outOmml = format(mml2omml(mml))
   if (omml) {
     expect(outOmml).toEqual(format(omml))
   } else {
