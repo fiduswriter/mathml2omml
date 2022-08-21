@@ -19,7 +19,7 @@ export function menclose (element, targetParent, previousSibling, nextSibling, a
           name: 'm:radPr',
           attribs: {},
           children: [
-            { type: 'tag', name: 'm:degHide', attribs: { 'm:val': 'on' }, children: []}
+            { type: 'tag', name: 'm:degHide', attribs: { 'm:val': 'on' }, children: [] }
           ]
         },
         { type: 'tag', name: 'm:deg', attribs: {}, children: [] },

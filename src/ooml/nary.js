@@ -25,7 +25,7 @@ export function getNaryTarget (naryChar, element, type, subHide = false, supHide
       name: 'm:naryPr',
       attribs: {},
       children: [
-        { type: 'tag', name: 'm:chr', attribs: { 'm:val': naryChar } , children: []},
+        { type: 'tag', name: 'm:chr', attribs: { 'm:val': naryChar }, children: [] },
         { type: 'tag', name: 'm:limLoc', attribs: { 'm:val': type }, children: [] },
         { type: 'tag', name: 'm:grow', attribs: { 'm:val': grow }, children: [] },
         { type: 'tag', name: 'm:subHide', attribs: { 'm:val': subHide ? 'on' : 'off' }, children: [] },

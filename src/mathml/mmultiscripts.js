@@ -85,7 +85,6 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
       attribs: {},
       children: [{
         type: 'tag',
-        attribs: {},
         name: 'm:e',
         attribs: {},
         children: [

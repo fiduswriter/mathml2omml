@@ -2,11 +2,13 @@
   "name": "mathml2omml",
   "version": "0.3.0",
   "description": "a MathML to OMML converter ",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
-    "lint": "eslint ."
+    "lint": "eslint src/",
+    "transpile": "rollup -c",
+    "prepublishOnly": "npm run lint && npm run transpile"
   },
   "repository": {
     "type": "git",
@@ -23,17 +25,17 @@
     "url": "https://github.com/fiduswriter/mathml2omml/issues"
   },
   "homepage": "https://github.com/fiduswriter/mathml2omml#readme",
-  "dependencies": {
-    "dom-serializer": "^2.0.0",
-    "htmlparser2": "^8.0.1",
-    "jest": "^28.1.0",
-    "xml-formatter": "^2.6.1"
-  },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "eslint": "^8.17.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.2",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "rollup": "^2.78.1",
+    "dom-serializer": "^2.0.0",
+    "htmlparser2": "^8.0.1",
+    "jest": "^28.1.0",
+    "xml-formatter": "^2.6.1"
   }
 }

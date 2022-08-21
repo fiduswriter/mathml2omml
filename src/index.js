@@ -1,11 +1,10 @@
-import * as htmlparser2 from "htmlparser2"
-import render from "dom-serializer"
+import * as htmlparser2 from 'htmlparser2'
+import render from 'dom-serializer'
 import { walker } from './walker.js'
 import { cleanText } from './helpers.js'
 
 class MML2OMML {
   constructor (mmlString) {
-
     this.inString = mmlString
     this.inXML = htmlparser2.parseDocument(mmlString)
     cleanText(this.inXML)
@@ -20,7 +19,7 @@ class MML2OMML {
   }
 
   getResult () {
-    this.outString = render([this.outXML], {xmlMode: true, encodeEntities: false, decodeEntities: false})
+    this.outString = render([this.outXML], { xmlMode: true, encodeEntities: false, decodeEntities: false })
     return this.outString
   }
 }
