@@ -61,11 +61,13 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
     const subscriptTarget = {
       name: 'm:sub',
       type: 'tag',
+      attribs: {},
       children: []
     }
     const superscriptTarget = {
       name: 'm:sup',
       type: 'tag',
+      attribs: {},
       children: []
     }
     walker(
@@ -77,7 +79,7 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
     )
     topTarget.children.push(subscriptTarget)
     topTarget.children.push(superscriptTarget)
-    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
+    topTarget.children.push({ type: 'tag', name: 'm:e', attribs: {}, children: [] })
     targetParent.children.push(topTarget)
     return
   }
@@ -87,6 +89,7 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
   const baseTarget = {
     name: 'm:e',
     type: 'tag',
+    attribs: {},
     children: []
   }
   walker(
@@ -121,34 +124,40 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
     targetParent.children.push({
       type: 'tag',
       name: 'm:bar',
+      attribs: {},
       children: [
         {
           type: 'tag',
           name: 'm:barPr',
+          attribs: {},
           children: [{
             type: 'tag',
             name: 'm:pos',
             attribs: {
               'm:val': direction === 'under' ? 'bot' : 'top'
-            }
+            },
+            children: []
           }]
         },
         {
           type: 'tag',
           name: 'm:e',
+          attribs: {},
           children: [{
             type: 'tag',
             name: direction === 'under' ? 'm:sSub' : 'm:sSup',
+            attribs: {},
             children: [
               {
                 type: 'tag',
                 name: direction === 'under' ? 'm:sSubPr' : 'm:sSupPr',
+                attribs: {},
                 children: [
-                  { type: 'tag', name: 'm:ctrlPr' }
+                  { type: 'tag', name: 'm:ctrlPr', attribs: {}, children: [] }
                 ]
               },
               baseTarget,
-              { type: 'tag', name: 'm:sub' }
+              { type: 'tag', name: 'm:sub', attribs: {}, children: [] }
             ]
           }]
         }
@@ -181,16 +190,19 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
     targetParent.children.push({
       type: 'tag',
       name: 'm:acc',
+      attribs: {},
       children: [
         {
           type: 'tag',
           name: 'm:accPr',
+          attribs: {},
           children: [{
             type: 'tag',
             name: 'm:chr',
             attribs: {
               'm:val': UPPER_COMBINATION[scriptText] || scriptText
-            }
+            },
+            children: []
           }]
         },
         baseTarget
@@ -214,17 +226,20 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
     targetParent.children.push({
       type: 'tag',
       name: 'm:groupChr',
+      attribs: {},
       children: [
         {
           type: 'tag',
           name: 'm:groupChrPr',
+          attribs: {},
           children: [{
             type: 'tag',
             name: 'm:chr',
             attribs: {
               'm:val': scriptText,
               'm:pos': direction === 'under' ? 'bot' : 'top'
-            }
+            },
+            children: []
           }]
         },
         baseTarget
@@ -237,6 +252,7 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
   const scriptTarget = {
     name: 'm:lim',
     type: 'tag',
+    attribs: {},
     children: []
   }
 
@@ -250,6 +266,7 @@ function underOrOver (element, targetParent, previousSibling, nextSibling, ances
   targetParent.children.push({
     type: 'tag',
     name: direction === 'under' ? 'm:limLow' : 'm:limUpp',
+    attribs: {},
     children: [
       baseTarget,
       scriptTarget

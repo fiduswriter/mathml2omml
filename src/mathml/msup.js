@@ -32,6 +32,7 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
     const baseTarget = {
       name: 'm:e',
       type: 'tag',
+      attribs: {},
       children: []
     }
     walker(
@@ -45,13 +46,17 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
     topTarget = {
       type: 'tag',
       name: 'm:sSup',
+      attribs: {},
       children: [
         {
           type: 'tag',
           name: 'm:sSupPr',
+          attribs: {},
           children: [{
             type: 'tag',
-            name: 'm:ctrlPr'
+            name: 'm:ctrlPr',
+            attribs: {},
+            children: []
           }]
         },
         baseTarget
@@ -62,6 +67,7 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
   const superscriptTarget = {
     name: 'm:sup',
     type: 'tag',
+    attribs: {},
     children: []
   }
 
@@ -75,7 +81,7 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
 
   topTarget.children.push(superscriptTarget)
   if (element.isNary) {
-    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
+    topTarget.children.push({ type: 'tag', name: 'm:e', attribs: {}, children: [] })
   }
   targetParent.children.push(topTarget)
   // Don't iterate over children in the usual way.

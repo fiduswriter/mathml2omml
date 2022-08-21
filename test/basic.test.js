@@ -1,7 +1,6 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'fs'
 import { extname, join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { xml2js, js2xml } from '@netless/xml-js'
 import format from 'xml-formatter'
 import {
   mml2ooml
@@ -39,7 +38,7 @@ for (const fixture of mathfiles) {
 test.each(examples)('Can produce OOML from $fixture', ({ fixture, mml, omml }) => {
   const outOmml = format(mml2ooml(mml))
   if (omml) {
-    expect(outOmml).toEqual(format(js2xml(xml2js(omml, { captureSpacesBetweenElements: true }))))
+    expect(outOmml).toEqual(format(omml))
   } else {
     expect(outOmml).toMatchSnapshot()
   }

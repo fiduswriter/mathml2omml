@@ -13,8 +13,9 @@ export function walker (element, targetParent, previousSibling = false, nextSibl
     addScriptlevel(targetParent, ancestors)
   }
   let targetElement
-  if (mathmlHandlers[element.name || element.type]) {
-    targetElement = mathmlHandlers[element.name || element.type](
+  const nameOrType = element.name || element.type
+  if (mathmlHandlers[nameOrType]) {
+    targetElement = mathmlHandlers[nameOrType](
       element,
       targetParent,
       previousSibling,
@@ -22,8 +23,8 @@ export function walker (element, targetParent, previousSibling = false, nextSibl
       ancestors
     )
   } else {
-    if ((element.name || element.type)) {
-      console.warn(`Type not supported: ${element.name || element.type}`)
+    if (nameOrType && nameOrType !== 'root') {
+      console.warn(`Type not supported: ${nameOrType}`)
     }
 
     targetElement = targetParent
@@ -33,15 +34,15 @@ export function walker (element, targetParent, previousSibling = false, nextSibl
     // Target element hasn't been assigned, so don't handle children.
     return
   }
-  if (element.elements?.length) {
+  if (element.children?.length) {
     ancestors = [...ancestors]
     ancestors.unshift(element)
-    for (let i = 0; i < element.elements.length; i++) {
+    for (let i = 0; i < element.children.length; i++) {
       walker(
-        element.elements[i],
+        element.children[i],
         targetElement,
-        element.elements[i - 1],
-        element.elements[i + 1],
+        element.children[i - 1],
+        element.children[i + 1],
         ancestors
       )
     }

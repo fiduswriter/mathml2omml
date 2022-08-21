@@ -11,11 +11,13 @@ export function mfrac (element, targetParent, previousSibling, nextSibling, ance
   const numeratorTarget = {
     name: 'm:num',
     type: 'tag',
+    attribs: {},
     children: []
   }
   const denumeratorTarget = {
     name: 'm:den',
     type: 'tag',
+    attribs: {},
     children: []
   }
   ancestors = [...ancestors]
@@ -38,17 +40,20 @@ export function mfrac (element, targetParent, previousSibling, nextSibling, ance
   targetParent.children.push({
     type: 'tag',
     name: 'm:f',
+    attribs: {},
     children: [
       {
         type: 'tag',
         name: 'm:fPr',
+        attribs: {},
         children: [
           {
             type: 'tag',
             name: 'm:type',
             attribs: {
               'm:val': fracType
-            }
+            },
+            children: []
           }
         ]
       },

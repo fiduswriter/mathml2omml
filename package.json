@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/fiduswriter/mathml2omml#readme",
   "dependencies": {
-    "@netless/xml-js": "^1.6.15",
     "dom-serializer": "^2.0.0",
     "htmlparser2": "^8.0.1",
     "jest": "^28.1.0",

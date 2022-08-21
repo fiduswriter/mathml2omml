@@ -2,6 +2,7 @@ export function mspace (element, targetParent, previousSibling, nextSibling, anc
   targetParent.children.push({
     name: 'm:r',
     type: 'tag',
+    attribs: {},
     children: [{
       name: 'm:t',
       type: 'tag',
@@ -11,7 +12,7 @@ export function mspace (element, targetParent, previousSibling, nextSibling, anc
       children: [
         {
           type: 'text',
-          text: ' '
+          data: ' '
         }
       ]
     }]

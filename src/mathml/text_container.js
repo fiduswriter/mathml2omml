@@ -33,6 +33,7 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
     const rElement = {
       name: 'm:r',
       type: 'tag',
+      attribs: {},
       children: []
     }
 
@@ -40,21 +41,25 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
       const wrPr = {
         name: 'w:rPr',
         type: 'tag',
+        attribs: {},
         children: []
       }
       if (style.variant.includes('bold')) {
-        wrPr.children.push({ name: 'w:b', type: 'tag' })
+        wrPr.children.push({ name: 'w:b', type: 'tag', attribs: {}, children: [] })
       }
       if (style.variant.includes('italic')) {
-        wrPr.children.push({ name: 'w:i', type: 'tag' })
+        wrPr.children.push({ name: 'w:i', type: 'tag', attribs: {}, children: [] })
       }
       rElement.children.push(wrPr)
       const mrPr = {
         name: 'm:rPr',
         type: 'tag',
+        attribs: {},
         children: [{
           name: 'm:nor',
-          type: 'tag'
+          type: 'tag',
+          attribs: {},
+          children: []
         }]
       }
       if (style.variant !== 'italic') {
@@ -63,7 +68,8 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
           type: 'tag',
           attribs: {
             'm:val': STYLES[style.variant]
-          }
+          },
+          children: []
         })
       }
       rElement.children.push(mrPr)
@@ -71,9 +77,12 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
       rElement.children.push({
         name: 'm:rPr',
         type: 'tag',
+        attribs: {},
         children: [{
           name: 'm:nor',
-          type: 'tag'
+          type: 'tag',
+          attribs: {},
+          children: []
         }]
       })
     } else if (
@@ -86,10 +95,12 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
       rElement.children.push({
         name: 'm:rPr',
         type: 'tag',
+        attribs: {},
         children: [{
           name: 'm:sty',
           type: 'tag',
-          attribs: { 'm:val': 'p' }
+          attribs: { 'm:val': 'p' },
+          children: []
         }]
       })
     }

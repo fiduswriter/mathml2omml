@@ -4,10 +4,12 @@ export function addScriptlevel (target, ancestors) {
     target.children.unshift({
       type: 'tag',
       name: 'm:argPr',
+      attribs: {},
       children: [{
         type: 'tag',
         name: 'm:scrLvl',
-        attribs: { 'm:val': scriptlevel }
+        attribs: { 'm:val': scriptlevel },
+        children: []
       }]
     })
   }

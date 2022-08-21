@@ -15,6 +15,7 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
   const baseTarget = {
     type: 'tag',
     name: 'm:e',
+    attribs: {},
     children: []
   }
   walker(
@@ -28,6 +29,7 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
   const rootTarget = {
     type: 'tag',
     name: 'm:deg',
+    attribs: {},
     children: []
   }
   walker(
@@ -43,12 +45,14 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
   targetParent.children.push({
     type: 'tag',
     name: 'm:rad',
+    attribs: {},
     children: [
       {
         type: 'tag',
         name: 'm:radPr',
+        attribs: {},
         children: [
-          { type: 'tag', name: 'm:degHide', attribs: { 'm:val': rootText.length ? 'off' : 'on' } }
+          { type: 'tag', name: 'm:degHide', attribs: { 'm:val': rootText.length ? 'off' : 'on' }, children: [] }
         ]
       },
       rootTarget,

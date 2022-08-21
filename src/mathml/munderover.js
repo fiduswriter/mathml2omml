@@ -32,11 +32,13 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
     const subscriptTarget = {
       name: 'm:sub',
       type: 'tag',
+      attribs: {},
       children: []
     }
     const superscriptTarget = {
       name: 'm:sup',
       type: 'tag',
+      attribs: {},
       children: []
     }
     walker(
@@ -55,7 +57,7 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
     )
     topTarget.children.push(subscriptTarget)
     topTarget.children.push(superscriptTarget)
-    topTarget.children.push({ type: 'tag', name: 'm:e', children: [] })
+    topTarget.children.push({ type: 'tag', name: 'm:e', attribs: {}, children: [] })
     targetParent.children.push(topTarget)
     return
   }
@@ -65,6 +67,7 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
   const baseTarget = {
     name: 'm:e',
     type: 'tag',
+    attribs: {},
     children: []
   }
 
@@ -79,11 +82,13 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
   const underscriptTarget = {
     name: 'm:lim',
     type: 'tag',
+    attribs: {},
     children: []
   }
   const overscriptTarget = {
     name: 'm:lim',
     type: 'tag',
+    attribs: {},
     children: []
   }
 
@@ -104,14 +109,17 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
   targetParent.children.push({
     type: 'tag',
     name: 'm:limUpp',
+    attribs: {},
     children: [
       {
         type: 'tag',
         name: 'm:e',
+        attribs: {},
         children: [
           {
             type: 'tag',
             name: 'm:limLow',
+            attribs: {},
             children: [
               baseTarget,
               underscriptTarget

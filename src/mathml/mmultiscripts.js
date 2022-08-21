@@ -50,6 +50,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     const subscriptTarget = {
       name: 'm:sub',
       type: 'tag',
+      attribs: {},
       children: []
     }
     postSubs.forEach(
@@ -65,6 +66,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     const superscriptTarget = {
       name: 'm:sup',
       type: 'tag',
+      attribs: {},
       children: []
     }
 
@@ -80,9 +82,12 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
 
     const topPostTarget = {
       type: 'tag',
+      attribs: {},
       children: [{
         type: 'tag',
+        attribs: {},
         name: 'm:e',
+        attribs: {},
         children: [
           topTarget
         ]
@@ -106,6 +111,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     const preSubscriptTarget = {
       name: 'm:sub',
       type: 'tag',
+      attribs: {},
       children: []
     }
     preSubs.forEach(
@@ -121,6 +127,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     const preSuperscriptTarget = {
       name: 'm:sup',
       type: 'tag',
+      attribs: {},
       children: []
     }
 
@@ -136,10 +143,12 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
     const topPreTarget = {
       name: 'm:sPre',
       type: 'tag',
+      attribs: {},
       children: [
         {
           name: 'm:e',
           type: 'tag',
+          attribs: {},
           children: [
             topTarget
           ]
