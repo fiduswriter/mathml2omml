@@ -1,4 +1,5 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
+import {terser} from 'rollup-plugin-terser'
 
 const onwarn = warning => {
   // Silence circular dependency warning for moment package
@@ -21,7 +22,8 @@ export default {
     }
   ],
   plugins: [
-    nodeResolve()
+    nodeResolve(),
+    terser()
   ],
   onwarn
 }

@@ -1,8 +1,8 @@
-import * as entities from "entities"
+import * as entities from 'entities'
 
 import parseTag from './parse-tag'
 
-const tagRE = /<[a-zA-Z0-9\-\!\/](?:"[^"]*"|'[^']*'|[^'">])*>/g
+const tagRE = /<[a-zA-Z0-9\-!/](?:"[^"]*"|'[^']*'|[^'">])*>/g
 const whitespaceRE = /^\s*$/
 
 const textContainerNames = ['mtext', 'mi', 'mn', 'mo', 'ms']
@@ -10,7 +10,7 @@ const textContainerNames = ['mtext', 'mi', 'mn', 'mo', 'ms']
 // re-used obj for quick lookups of components
 const empty = Object.create(null)
 
-export function parse(html, options) {
+export function parse (html, options) {
   options || (options = {})
   options.components || (options.components = empty)
   const result = []
@@ -54,7 +54,7 @@ export function parse(html, options) {
       ) {
         current.children.push({
           type: 'text',
-          data: entities.decodeXML(html.slice(start, html.indexOf('<', start))).trim(),
+          data: entities.decodeXML(html.slice(start, html.indexOf('<', start))).trim()
         })
       }
 
@@ -101,7 +101,7 @@ export function parse(html, options) {
         if ((end > -1 && level + parent.length >= 0) || data !== ' ') {
           parent.push({
             type: 'text',
-            data: entities.decodeXML(data),
+            data: entities.decodeXML(data)
           })
         }
       }

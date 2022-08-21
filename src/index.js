@@ -1,4 +1,4 @@
-import {parse, stringifyDoc} from "./parse-stringify"
+import { parse, stringifyDoc } from './parse-stringify'
 import { walker } from './walker.js'
 
 class MML2OMML {
@@ -11,7 +11,7 @@ class MML2OMML {
 
   run () {
     const outXML = {}
-    walker({children: this.inXML, type: 'root'}, outXML)
+    walker({ children: this.inXML, type: 'root' }, outXML)
     this.outXML = outXML
   }
 

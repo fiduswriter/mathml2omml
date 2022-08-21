@@ -1,6 +1,6 @@
-function attrString(attribs) {
+function attrString (attribs) {
   const buff = []
-  for (let key in attribs) {
+  for (const key in attribs) {
     buff.push(key + '="' + attribs[key] + '"')
   }
   if (!buff.length) {
@@ -9,7 +9,7 @@ function attrString(attribs) {
   return ' ' + buff.join(' ')
 }
 
-function stringify(buff, doc) {
+function stringify (buff, doc) {
   switch (doc.type) {
     case 'text':
       return buff + doc.data
@@ -32,7 +32,7 @@ function stringify(buff, doc) {
   }
 }
 
-export function stringifyDoc(doc) {
+export function stringifyDoc (doc) {
   return doc.reduce(function (token, rootEl) {
     return token + stringify('', rootEl)
   }, '')

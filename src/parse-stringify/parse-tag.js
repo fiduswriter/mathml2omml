@@ -1,12 +1,12 @@
 const attrRE = /\s([^'"/\s><]+?)[\s/>]|([^\s=]+)=\s?(".*?"|'.*?')/g
 
-export default function stringify(tag) {
+export default function stringify (tag) {
   const res = {
     type: 'tag',
     name: '',
     voidElement: false,
     attribs: {},
-    children: [],
+    children: []
   }
 
   const tagMatch = tag.match(/<\/?([^\s]+?)[/\s>]/)
@@ -23,7 +23,7 @@ export default function stringify(tag) {
       const endIndex = tag.indexOf('-->')
       return {
         type: 'comment',
-        comment: endIndex !== -1 ? tag.slice(4, endIndex) : '',
+        comment: endIndex !== -1 ? tag.slice(4, endIndex) : ''
       }
     }
   }

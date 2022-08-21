@@ -37,8 +37,10 @@ License
 
 LGPL v.3.0 or later.
 
+The xml parser/stringifier in the `parse-stringify`-folder is based upon [html-parse-stringify](https://github.com/henrikjoreteg/html-parse-stringify) (MIT).
+
 License of test files depends on source of files.
 
-Some test fixtures fall under other licenses/copyrights. See the LICENSE and copyirght.txt files in the different test fixture folders.
+Some test fixtures fall under other licenses/copyrights. See the LICENSE and copyright.txt files in the different test fixture folders.
 
 Remaining test fixtures fall under the same license and copyright as the source code.
