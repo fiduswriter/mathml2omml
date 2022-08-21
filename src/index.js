@@ -24,7 +24,7 @@ class MML2OMML {
   }
 }
 
-export const mml2ooml = function (mmlString) {
+export const mml2omml = function (mmlString) {
   const converter = new MML2OMML(mmlString)
   converter.run()
   return converter.getResult()
