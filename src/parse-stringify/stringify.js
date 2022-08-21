@@ -1,7 +1,7 @@
-function attrString(attrs) {
+function attrString(attribs) {
   const buff = []
-  for (let key in attrs) {
-    buff.push(key + '="' + attrs[key] + '"')
+  for (let key in attribs) {
+    buff.push(key + '="' + attribs[key] + '"')
   }
   if (!buff.length) {
     return ''
@@ -12,24 +12,27 @@ function attrString(attrs) {
 function stringify(buff, doc) {
   switch (doc.type) {
     case 'text':
-      return buff + doc.content
+      return buff + doc.data
     case 'tag':
+    {
+      const voidElement = doc.voidElement || (!doc.children.length && doc.attribs['xml:space'] !== 'preserve')
       buff +=
         '<' +
         doc.name +
-        (doc.attrs ? attrString(doc.attrs) : '') +
-        (doc.voidElement ? '/>' : '>')
-      if (doc.voidElement) {
+        (doc.attribs ? attrString(doc.attribs) : '') +
+        (voidElement ? '/>' : '>')
+      if (voidElement) {
         return buff
       }
       return buff + doc.children.reduce(stringify, '') + '</' + doc.name + '>'
+    }
     case 'comment':
       buff += '<!--' + doc.comment + '-->'
       return buff
   }
 }
 
-export default function (doc) {
+export function stringifyDoc(doc) {
   return doc.reduce(function (token, rootEl) {
     return token + stringify('', rootEl)
   }, '')

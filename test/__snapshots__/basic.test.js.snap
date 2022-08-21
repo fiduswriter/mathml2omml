@@ -1188,7 +1188,7 @@ exports[`Can produce OOML from joe_java/sophomores_dream.mml 1`] = `
         </m:sup>
     </m:sSup>
     <m:r>
-        <m:t xml:space=\\"preserve\\"/>
+        <m:t xml:space=\\"preserve\\"></m:t>
     </m:r>
     <m:sSup>
         <m:sSupPr>

@@ -1,37 +1,24 @@
+import * as entities from "entities"
+
 import parseTag from './parse-tag'
 
 const tagRE = /<[a-zA-Z0-9\-\!\/](?:"[^"]*"|'[^']*'|[^'">])*>/g
 const whitespaceRE = /^\s*$/
 
+const textContainerNames = ['mtext', 'mi', 'mn', 'mo', 'ms']
+
 // re-used obj for quick lookups of components
 const empty = Object.create(null)
 
-export default function parse(html, options) {
+export function parse(html, options) {
   options || (options = {})
   options.components || (options.components = empty)
   const result = []
   const arr = []
   let current
   let level = -1
-  let inComponent = false
-
-  // handle text at top level
-  if (html.indexOf('<') !== 0) {
-    var end = html.indexOf('<')
-    result.push({
-      type: 'text',
-      content: end === -1 ? html : html.substring(0, end),
-    })
-  }
 
   html.replace(tagRE, function (tag, index) {
-    if (inComponent) {
-      if (tag !== '</' + current.name + '>') {
-        return
-      } else {
-        inComponent = false
-      }
-    }
     const isOpen = tag.charAt(1) !== '/'
     const isComment = tag.startsWith('<!--')
     const start = index + tag.length
@@ -57,18 +44,17 @@ export default function parse(html, options) {
       current = parseTag(tag)
       if (current.type === 'tag' && options.components[current.name]) {
         current.type = 'component'
-        inComponent = true
       }
 
       if (
+        textContainerNames.includes(current.name) &&
         !current.voidElement &&
-        !inComponent &&
         nextChar &&
         nextChar !== '<'
       ) {
         current.children.push({
           type: 'text',
-          content: html.slice(start, html.indexOf('<', start)),
+          data: entities.decodeXML(html.slice(start, html.indexOf('<', start))).trim(),
         })
       }
 
@@ -95,29 +81,27 @@ export default function parse(html, options) {
         // move current up a level to match the end tag
         current = level === -1 ? result : arr[level]
       }
-      if (!inComponent && nextChar !== '<' && nextChar) {
+      if (level > -1 && textContainerNames.includes[arr[level].name] && nextChar !== '<' && nextChar) {
         // trailing text node
-        // if we're at the root, push a base text node. otherwise add as
-        // a child to the current node.
-        parent = level === -1 ? result : arr[level].children
+        parent = arr[level].children
 
         // calculate correct end of the content slice in case there's
         // no tag after the text node.
         const end = html.indexOf('<', start)
-        let content = html.slice(start, end === -1 ? undefined : end)
+        let data = html.slice(start, end === -1 ? undefined : end)
         // if a node is nothing but whitespace, collapse it as the spec states:
         // https://www.w3.org/TR/html4/struct/text.html#h-9.1
-        if (whitespaceRE.test(content)) {
-          content = ' '
+        if (whitespaceRE.test(data)) {
+          data = ' '
         }
         // don't add whitespace-only text nodes if they would be trailing text nodes
         // or if they would be leading whitespace-only text nodes:
         //  * end > -1 indicates this is not a trailing text node
         //  * leading node is when level is -1 and parent has length 0
-        if ((end > -1 && level + parent.length >= 0) || content !== ' ') {
+        if ((end > -1 && level + parent.length >= 0) || data !== ' ') {
           parent.push({
             type: 'text',
-            content: content,
+            data: entities.decodeXML(data),
           })
         }
       }

@@ -1,4 +1,3 @@
-import lookup from 'void-elements'
 const attrRE = /\s([^'"/\s><]+?)[\s/>]|([^\s=]+)=\s?(".*?"|'.*?')/g
 
 export default function stringify(tag) {
@@ -6,7 +5,7 @@ export default function stringify(tag) {
     type: 'tag',
     name: '',
     voidElement: false,
-    attrs: {},
+    attribs: {},
     children: [],
   }
 
@@ -14,7 +13,6 @@ export default function stringify(tag) {
   if (tagMatch) {
     res.name = tagMatch[1]
     if (
-      lookup[tagMatch[1]] ||
       tag.charAt(tag.length - 2) === '/'
     ) {
       res.voidElement = true
@@ -51,10 +49,10 @@ export default function stringify(tag) {
         arr = attr.split('=')
       }
 
-      res.attrs[arr[0]] = arr[1]
+      res.attribs[arr[0]] = arr[1]
       reg.lastIndex--
     } else if (result[2]) {
-      res.attrs[result[2]] = result[3].trim().substring(1, result[3].length - 1)
+      res.attribs[result[2]] = result[3].trim().substring(1, result[3].length - 1)
     }
   }
 

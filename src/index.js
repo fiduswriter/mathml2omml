@@ -1,25 +1,22 @@
-import * as htmlparser2 from 'htmlparser2'
-import render from 'dom-serializer'
+import {parse, stringifyDoc} from "./parse-stringify"
 import { walker } from './walker.js'
-import { cleanText } from './helpers.js'
 
 class MML2OMML {
   constructor (mmlString) {
     this.inString = mmlString
-    this.inXML = htmlparser2.parseDocument(mmlString)
-    cleanText(this.inXML)
+    this.inXML = parse(mmlString)
     this.outXML = false
     this.outString = false
   }
 
   run () {
     const outXML = {}
-    walker(this.inXML, outXML)
+    walker({children: this.inXML, type: 'root'}, outXML)
     this.outXML = outXML
   }
 
   getResult () {
-    this.outString = render([this.outXML], { xmlMode: true, encodeEntities: false, decodeEntities: false })
+    this.outString = stringifyDoc([this.outXML])
     return this.outString
   }
 }
