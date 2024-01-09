@@ -1,9 +1,9 @@
 {
-  "name": "mathml2omml",
-  "version": "0.4.0",
+  "name": "@seewo-doc/mathml2omml",
+  "version": "0.4.1",
   "description": "a MathML to OMML converter ",
-  "main": "dist/index.js",
-  "type": "module",
+  "main": "./dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "lint": "eslint src/",
@@ -25,6 +25,9 @@
     "url": "https://github.com/fiduswriter/mathml2omml/issues"
   },
   "homepage": "https://github.com/fiduswriter/mathml2omml#readme",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "entities": "^4.3.1",
     "eslint": "^8.17.0",
