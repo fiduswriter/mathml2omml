@@ -52,9 +52,10 @@ export function parse (html, options) {
         nextChar &&
         nextChar !== '<'
       ) {
+        const data = html.slice(start, html.indexOf('<', start)).trim()
         current.children.push({
           type: 'text',
-          data: entities.decodeXML(html.slice(start, html.indexOf('<', start))).trim()
+          data: options.disableDecode ? data : entities.decodeXML(data)
         })
       }
 
@@ -101,7 +102,7 @@ export function parse (html, options) {
         if ((end > -1 && level + parent.length >= 0) || data !== ' ') {
           parent.push({
             type: 'text',
-            data: entities.decodeXML(data)
+            data: options.disableDecode ? data : entities.decodeXML(data)
           })
         }
       }

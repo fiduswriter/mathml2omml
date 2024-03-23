@@ -1,6 +1,6 @@
 {
   "name": "@seewo-doc/mathml2omml",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "description": "a MathML to OMML converter ",
   "main": "./dist/index.cjs.js",
   "module": "dist/index.esm.js",
