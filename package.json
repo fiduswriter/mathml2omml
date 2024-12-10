@@ -4,7 +4,6 @@
   "description": "a MathML to OMML converter ",
   "main": "./dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest",
     "lint": "eslint src/",
