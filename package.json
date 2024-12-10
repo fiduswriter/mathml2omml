@@ -1,6 +1,6 @@
 {
-  "name": "@hungknguyennpm/mathml2omml",
-  "version": "0.4.4",
+  "name": "@hungknguyen/mathml2omml",
+  "version": "0.4.5",
   "description": "a MathML to OMML converter ",
   "main": "./dist/index.cjs.js",
   "module": "dist/index.esm.js",
