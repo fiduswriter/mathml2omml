@@ -8,7 +8,8 @@
     "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
     "lint": "eslint src/",
     "transpile": "rollup -c",
-    "prepublishOnly": "npm run lint && npm run transpile"
+    "prepublishOnly": "npm run lint && npm run transpile",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -41,17 +42,15 @@
     "rollup": "^4.35.0",
     "xml-formatter": "^3.6.4"
   },
-  {
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
-    },
-    "lint-staged": {
-      "src/**/*.js": [
-        "eslint --fix",
-        "git add"
-      ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
