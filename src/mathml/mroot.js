@@ -1,7 +1,7 @@
-import { walker } from '../walker.js'
 import { getTextContent } from '../helpers.js'
+import { walker } from '../walker.js'
 
-export function mroot (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mroot(element, targetParent, previousSibling, nextSibling, ancestors) {
   // Root
   if (element.children.length !== 2) {
     // treat as mrow
@@ -18,13 +18,7 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
     attribs: {},
     children: []
   }
-  walker(
-    base,
-    baseTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(base, baseTarget, false, false, ancestors)
 
   const rootTarget = {
     type: 'tag',
@@ -32,13 +26,7 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
     attribs: {},
     children: []
   }
-  walker(
-    root,
-    rootTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(root, rootTarget, false, false, ancestors)
 
   const rootText = getTextContent(root)
 
@@ -52,7 +40,12 @@ export function mroot (element, targetParent, previousSibling, nextSibling, ance
         name: 'm:radPr',
         attribs: {},
         children: [
-          { type: 'tag', name: 'm:degHide', attribs: { 'm:val': rootText.length ? 'off' : 'on' }, children: [] }
+          {
+            type: 'tag',
+            name: 'm:degHide',
+            attribs: { 'm:val': rootText.length ? 'off' : 'on' },
+            children: []
+          }
         ]
       },
       rootTarget,

@@ -1,4 +1,4 @@
-export function menclose (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function menclose(element, targetParent, previousSibling, nextSibling, ancestors) {
   const type = element.attribs?.notation?.split(' ')[0] || 'longdiv'
 
   const targetElement = {
@@ -18,9 +18,7 @@ export function menclose (element, targetParent, previousSibling, nextSibling, a
           type: 'tag',
           name: 'm:radPr',
           attribs: {},
-          children: [
-            { type: 'tag', name: 'm:degHide', attribs: { 'm:val': 'on' }, children: [] }
-          ]
+          children: [{ type: 'tag', name: 'm:degHide', attribs: { 'm:val': 'on' }, children: [] }]
         },
         { type: 'tag', name: 'm:deg', attribs: {}, children: [] },
         targetElement
@@ -106,12 +104,7 @@ export function menclose (element, targetParent, previousSibling, nextSibling, a
         containerElement.children = [borderBoxPr, targetElement]
         break
       default:
-        borderBoxPr.children = [
-          hide.t,
-          hide.b,
-          hide.l,
-          hide.r
-        ]
+        borderBoxPr.children = [hide.t, hide.b, hide.l, hide.r]
         containerElement.children = [borderBoxPr, targetElement]
         break
     }

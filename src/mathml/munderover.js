@@ -1,7 +1,7 @@
-import { walker } from '../walker.js'
 import { getNary, getNaryTarget } from '../ooml/index.js'
+import { walker } from '../walker.js'
 
-export function munderover (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function munderover(element, targetParent, previousSibling, nextSibling, ancestors) {
   // Munderover
   if (element.children.length !== 3) {
     // treat as mrow
@@ -41,20 +41,8 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
       attribs: {},
       children: []
     }
-    walker(
-      underscript,
-      subscriptTarget,
-      false,
-      false,
-      ancestors
-    )
-    walker(
-      overscript,
-      superscriptTarget,
-      false,
-      false,
-      ancestors
-    )
+    walker(underscript, subscriptTarget, false, false, ancestors)
+    walker(overscript, superscriptTarget, false, false, ancestors)
     topTarget.children.push(subscriptTarget)
     topTarget.children.push(superscriptTarget)
     topTarget.children.push({ type: 'tag', name: 'm:e', attribs: {}, children: [] })
@@ -71,13 +59,7 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
     children: []
   }
 
-  walker(
-    base,
-    baseTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(base, baseTarget, false, false, ancestors)
 
   const underscriptTarget = {
     name: 'm:lim',
@@ -92,20 +74,8 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
     children: []
   }
 
-  walker(
-    underscript,
-    underscriptTarget,
-    false,
-    false,
-    ancestors
-  )
-  walker(
-    overscript,
-    overscriptTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(underscript, underscriptTarget, false, false, ancestors)
+  walker(overscript, overscriptTarget, false, false, ancestors)
   targetParent.children.push({
     type: 'tag',
     name: 'm:limUpp',
@@ -120,10 +90,7 @@ export function munderover (element, targetParent, previousSibling, nextSibling,
             type: 'tag',
             name: 'm:limLow',
             attribs: {},
-            children: [
-              baseTarget,
-              underscriptTarget
-            ]
+            children: [baseTarget, underscriptTarget]
           }
         ]
       },

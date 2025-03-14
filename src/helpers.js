@@ -1,4 +1,4 @@
-export function getTextContent (node, trim = true) {
+export function getTextContent(node, trim = true) {
   let returnString = ''
   if (node.type === 'text') {
     let text = node.data.replace(/[\u2062]|[\u200B]/g, '')
@@ -7,11 +7,9 @@ export function getTextContent (node, trim = true) {
     }
     returnString += text
   } else if (node.children) {
-    node.children.forEach(
-      subNode => {
-        returnString += getTextContent(subNode, trim)
-      }
-    )
+    node.children.forEach((subNode) => {
+      returnString += getTextContent(subNode, trim)
+    })
   }
   return returnString
 }

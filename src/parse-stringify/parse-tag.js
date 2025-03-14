@@ -1,6 +1,6 @@
 const attrRE = /\s([^'"/\s><]+?)[\s/>]|([^\s=]+)=\s?(".*?"|'.*?')/g
 
-export default function stringify (tag) {
+export default function stringify(tag) {
   const res = {
     type: 'tag',
     name: '',
@@ -12,9 +12,7 @@ export default function stringify (tag) {
   const tagMatch = tag.match(/<\/?([^\s]+?)[/\s>]/)
   if (tagMatch) {
     res.name = tagMatch[1]
-    if (
-      tag.charAt(tag.length - 2) === '/'
-    ) {
+    if (tag.charAt(tag.length - 2) === '/') {
       res.voidElement = true
     }
 

@@ -1,8 +1,19 @@
-import { addScriptlevel } from './ooml/index.js'
 import * as mathmlHandlers from './mathml/index.js'
+import { addScriptlevel } from './ooml/index.js'
 
-export function walker (element, targetParent, previousSibling = false, nextSibling = false, ancestors = []) {
-  if (!previousSibling && ['m:deg', 'm:den', 'm:e', 'm:fName', 'm:lim', 'm:num', 'm:sub', 'm:sup'].includes(targetParent.name)) {
+export function walker(
+  element,
+  targetParent,
+  previousSibling = false,
+  nextSibling = false,
+  ancestors = []
+) {
+  if (
+    !previousSibling &&
+    ['m:deg', 'm:den', 'm:e', 'm:fName', 'm:lim', 'm:num', 'm:sub', 'm:sup'].includes(
+      targetParent.name
+    )
+  ) {
     // We are walking through the first element within one of the
     // elements where an <m:argPr> might occur. The <m:argPr> can specify
     // the scriptlevel, but it only makes sense if there is some content.

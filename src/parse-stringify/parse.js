@@ -10,15 +10,13 @@ const textContainerNames = ['mtext', 'mi', 'mn', 'mo', 'ms']
 // re-used obj for quick lookups of components
 const empty = Object.create(null)
 
-export function parse (html, options) {
-  options || (options = {})
-  options.components || (options.components = empty)
+export function parse(html, options = {}) {
   const result = []
   const arr = []
   let current
   let level = -1
 
-  html.replace(tagRE, function (tag, index) {
+  html.replace(tagRE, (tag, index) => {
     const isOpen = tag.charAt(1) !== '/'
     const isComment = tag.startsWith('<!--')
     const start = index + tag.length
@@ -42,7 +40,7 @@ export function parse (html, options) {
       level++
 
       current = parseTag(tag)
-      if (current.type === 'tag' && options.components[current.name]) {
+      if (current.type === 'tag' && options.components?.[current.name]) {
         current.type = 'component'
       }
 
@@ -74,15 +72,17 @@ export function parse (html, options) {
     }
 
     if (!isOpen || current.voidElement) {
-      if (
-        level > -1 &&
-        (current.voidElement || current.name === tag.slice(2, -1))
-      ) {
+      if (level > -1 && (current.voidElement || current.name === tag.slice(2, -1))) {
         level--
         // move current up a level to match the end tag
         current = level === -1 ? result : arr[level]
       }
-      if (level > -1 && textContainerNames.includes[arr[level].name] && nextChar !== '<' && nextChar) {
+      if (
+        level > -1 &&
+        textContainerNames.includes[arr[level].name] &&
+        nextChar !== '<' &&
+        nextChar
+      ) {
         // trailing text node
         parent = arr[level].children
 

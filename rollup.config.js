@@ -1,10 +1,8 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 
-const onwarn = warning => {
+const onwarn = (warning) => {
   // Silence circular dependency warning for moment package
-  if (
-    warning.code === 'CIRCULAR_DEPENDENCY'
-  ) {
+  if (warning.code === 'CIRCULAR_DEPENDENCY') {
     return
   }
 
@@ -20,8 +18,6 @@ export default {
       sourcemap: true
     }
   ],
-  plugins: [
-    nodeResolve()
-  ],
+  plugins: [nodeResolve()],
   onwarn
 }

@@ -1,7 +1,7 @@
-import { walker } from '../walker.js'
 import { getNary, getNaryTarget } from '../ooml/index.js'
+import { walker } from '../walker.js'
 
-export function msup (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function msup(element, targetParent, previousSibling, nextSibling, ancestors) {
   // Superscript
   if (element.children.length !== 2) {
     // treat as mrow
@@ -35,13 +35,7 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
       attribs: {},
       children: []
     }
-    walker(
-      base,
-      baseTarget,
-      false,
-      false,
-      ancestors
-    )
+    walker(base, baseTarget, false, false, ancestors)
 
     topTarget = {
       type: 'tag',
@@ -52,12 +46,14 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
           type: 'tag',
           name: 'm:sSupPr',
           attribs: {},
-          children: [{
-            type: 'tag',
-            name: 'm:ctrlPr',
-            attribs: {},
-            children: []
-          }]
+          children: [
+            {
+              type: 'tag',
+              name: 'm:ctrlPr',
+              attribs: {},
+              children: []
+            }
+          ]
         },
         baseTarget
       ]
@@ -71,13 +67,7 @@ export function msup (element, targetParent, previousSibling, nextSibling, ances
     children: []
   }
 
-  walker(
-    superscript,
-    superscriptTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(superscript, superscriptTarget, false, false, ancestors)
 
   topTarget.children.push(superscriptTarget)
   if (element.isNary) {

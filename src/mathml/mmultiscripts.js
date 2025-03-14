@@ -1,6 +1,6 @@
 import { walker } from '../walker.js'
 
-export function mmultiscripts (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mmultiscripts(element, targetParent, previousSibling, nextSibling, ancestors) {
   if (element.children.length === 0) {
     // Don't use
     return
@@ -37,13 +37,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
   const tempTarget = {
     children: []
   }
-  walker(
-    base,
-    tempTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(base, tempTarget, false, false, ancestors)
   let topTarget = tempTarget.children[0]
 
   if (postSubs.length || postSupers.length) {
@@ -53,15 +47,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
       attribs: {},
       children: []
     }
-    postSubs.forEach(
-      subscript => walker(
-        subscript,
-        subscriptTarget,
-        false,
-        false,
-        ancestors
-      )
-    )
+    postSubs.forEach((subscript) => walker(subscript, subscriptTarget, false, false, ancestors))
 
     const superscriptTarget = {
       name: 'm:sup',
@@ -70,27 +56,21 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
       children: []
     }
 
-    postSupers.forEach(
-      superscript => walker(
-        superscript,
-        superscriptTarget,
-        false,
-        false,
-        ancestors
-      )
+    postSupers.forEach((superscript) =>
+      walker(superscript, superscriptTarget, false, false, ancestors)
     )
 
     const topPostTarget = {
       type: 'tag',
       attribs: {},
-      children: [{
-        type: 'tag',
-        name: 'm:e',
-        attribs: {},
-        children: [
-          topTarget
-        ]
-      }]
+      children: [
+        {
+          type: 'tag',
+          name: 'm:e',
+          attribs: {},
+          children: [topTarget]
+        }
+      ]
     }
     if (postSubs.length && postSupers.length) {
       topPostTarget.name = 'm:sSubSup'
@@ -113,15 +93,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
       attribs: {},
       children: []
     }
-    preSubs.forEach(
-      subscript => walker(
-        subscript,
-        preSubscriptTarget,
-        false,
-        false,
-        ancestors
-      )
-    )
+    preSubs.forEach((subscript) => walker(subscript, preSubscriptTarget, false, false, ancestors))
 
     const preSuperscriptTarget = {
       name: 'm:sup',
@@ -130,14 +102,8 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
       children: []
     }
 
-    preSupers.forEach(
-      superscript => walker(
-        superscript,
-        preSuperscriptTarget,
-        false,
-        false,
-        ancestors
-      )
+    preSupers.forEach((superscript) =>
+      walker(superscript, preSuperscriptTarget, false, false, ancestors)
     )
     const topPreTarget = {
       name: 'm:sPre',
@@ -148,9 +114,7 @@ export function mmultiscripts (element, targetParent, previousSibling, nextSibli
           name: 'm:e',
           type: 'tag',
           attribs: {},
-          children: [
-            topTarget
-          ]
+          children: [topTarget]
         },
         preSubscriptTarget,
         preSuperscriptTarget

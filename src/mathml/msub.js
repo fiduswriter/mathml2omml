@@ -1,7 +1,7 @@
-import { walker } from '../walker.js'
 import { getNary, getNaryTarget } from '../ooml/index.js'
+import { walker } from '../walker.js'
 
-export function msub (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function msub(element, targetParent, previousSibling, nextSibling, ancestors) {
   // Subscript
   if (element.children.length !== 2) {
     // treat as mrow
@@ -34,13 +34,7 @@ export function msub (element, targetParent, previousSibling, nextSibling, ances
       attribs: {},
       children: []
     }
-    walker(
-      base,
-      baseTarget,
-      false,
-      false,
-      ancestors
-    )
+    walker(base, baseTarget, false, false, ancestors)
     topTarget = {
       type: 'tag',
       name: 'm:sSub',
@@ -50,12 +44,14 @@ export function msub (element, targetParent, previousSibling, nextSibling, ances
           type: 'tag',
           name: 'm:sSubPr',
           attribs: {},
-          children: [{
-            type: 'tag',
-            name: 'm:ctrlPr',
-            attribs: {},
-            children: []
-          }]
+          children: [
+            {
+              type: 'tag',
+              name: 'm:ctrlPr',
+              attribs: {},
+              children: []
+            }
+          ]
         },
         baseTarget
       ]
@@ -69,13 +65,7 @@ export function msub (element, targetParent, previousSibling, nextSibling, ances
     children: []
   }
 
-  walker(
-    subscript,
-    subscriptTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(subscript, subscriptTarget, false, false, ancestors)
   topTarget.children.push(subscriptTarget)
   if (element.isNary) {
     topTarget.children.push({ type: 'tag', name: 'm:sup', attribs: {}, children: [] })

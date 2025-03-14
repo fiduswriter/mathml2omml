@@ -1,6 +1,6 @@
 import { walker } from '../walker.js'
 
-export function mfrac (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mfrac(element, targetParent, previousSibling, nextSibling, ancestors) {
   if (element.children.length !== 2) {
     // treat as mrow
     return targetParent
@@ -22,20 +22,8 @@ export function mfrac (element, targetParent, previousSibling, nextSibling, ance
   }
   ancestors = [...ancestors]
   ancestors.unshift(element)
-  walker(
-    numerator,
-    numeratorTarget,
-    false,
-    false,
-    ancestors
-  )
-  walker(
-    denumerator,
-    denumeratorTarget,
-    false,
-    false,
-    ancestors
-  )
+  walker(numerator, numeratorTarget, false, false, ancestors)
+  walker(denumerator, denumeratorTarget, false, false, ancestors)
   const fracType = element.attribs?.linethickness === '0' ? 'noBar' : 'bar'
   targetParent.children.push({
     type: 'tag',

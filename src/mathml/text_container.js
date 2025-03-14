@@ -6,25 +6,24 @@ const STYLES = {
   'bold-italic': 'bi'
 }
 
-function textContainer (element, targetParent, previousSibling, nextSibling, ancestors, textType) {
+function textContainer(element, targetParent, previousSibling, nextSibling, ancestors, textType) {
   if (previousSibling.isNary) {
     const previousSiblingTarget = targetParent.children[targetParent.children.length - 1]
     targetParent = previousSiblingTarget.children[previousSiblingTarget.children.length - 1]
   }
 
-  const hasMglyphChild = element.children && element.children.find(element => element.name === 'mglyph')
+  const hasMglyphChild = element.children?.find((element) => element.name === 'mglyph')
   const style = getStyle(element, ancestors, previousSibling?.style)
   element.style = style // Add it to element to make it comparable
   element.hasMglyphChild = hasMglyphChild
-  const styleSame = Object.keys(style).every(key => {
-    const previousStyle = previousSibling?.style
-    return (previousStyle && style[key] === previousStyle[key])
-  }) && previousSibling?.hasMglyphChild === hasMglyphChild
-  const sameGroup = ( // Only group mtexts or mi, mn, mo with oneanother.
-    textType === previousSibling?.name
-  ) || (
-    ['mi', 'mn', 'mo'].includes(textType) && ['mi', 'mn', 'mo'].includes(previousSibling?.name)
-  )
+  const styleSame =
+    Object.keys(style).every((key) => {
+      const previousStyle = previousSibling?.style
+      return previousStyle && style[key] === previousStyle[key]
+    }) && previousSibling?.hasMglyphChild === hasMglyphChild
+  const sameGroup = // Only group mtexts or mi, mn, mo with oneanother.
+    textType === previousSibling?.name ||
+    (['mi', 'mn', 'mo'].includes(textType) && ['mi', 'mn', 'mo'].includes(previousSibling?.name))
   let targetElement
   if (sameGroup && styleSame && !hasMglyphChild) {
     const rElement = targetParent.children[targetParent.children.length - 1]
@@ -55,12 +54,14 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
         name: 'm:rPr',
         type: 'tag',
         attribs: {},
-        children: [{
-          name: 'm:nor',
-          type: 'tag',
-          attribs: {},
-          children: []
-        }]
+        children: [
+          {
+            name: 'm:nor',
+            type: 'tag',
+            attribs: {},
+            children: []
+          }
+        ]
       }
       if (style.variant !== 'italic') {
         mrPr.children.push({
@@ -78,30 +79,28 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
         name: 'm:rPr',
         type: 'tag',
         attribs: {},
-        children: [{
-          name: 'm:nor',
-          type: 'tag',
-          attribs: {},
-          children: []
-        }]
+        children: [
+          {
+            name: 'm:nor',
+            type: 'tag',
+            attribs: {},
+            children: []
+          }
+        ]
       })
-    } else if (
-      style.fontstyle === 'normal' ||
-      (
-        textType === 'ms' &&
-        style.fontstyle === ''
-      )
-    ) {
+    } else if (style.fontstyle === 'normal' || (textType === 'ms' && style.fontstyle === '')) {
       rElement.children.push({
         name: 'm:rPr',
         type: 'tag',
         attribs: {},
-        children: [{
-          name: 'm:sty',
-          type: 'tag',
-          attribs: { 'm:val': 'p' },
-          children: []
-        }]
+        children: [
+          {
+            name: 'm:sty',
+            type: 'tag',
+            attribs: { 'm:val': 'p' },
+            children: []
+          }
+        ]
       })
     }
 
@@ -119,22 +118,22 @@ function textContainer (element, targetParent, previousSibling, nextSibling, anc
   return targetElement
 }
 
-export function mtext (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mtext(element, targetParent, previousSibling, nextSibling, ancestors) {
   return textContainer(element, targetParent, previousSibling, nextSibling, ancestors, 'mtext')
 }
 
-export function mi (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mi(element, targetParent, previousSibling, nextSibling, ancestors) {
   return textContainer(element, targetParent, previousSibling, nextSibling, ancestors, 'mi')
 }
 
-export function mn (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mn(element, targetParent, previousSibling, nextSibling, ancestors) {
   return textContainer(element, targetParent, previousSibling, nextSibling, ancestors, 'mn')
 }
 
-export function mo (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function mo(element, targetParent, previousSibling, nextSibling, ancestors) {
   return textContainer(element, targetParent, previousSibling, nextSibling, ancestors, 'mo')
 }
 
-export function ms (element, targetParent, previousSibling, nextSibling, ancestors) {
+export function ms(element, targetParent, previousSibling, nextSibling, ancestors) {
   return textContainer(element, targetParent, previousSibling, nextSibling, ancestors, 'ms')
 }
