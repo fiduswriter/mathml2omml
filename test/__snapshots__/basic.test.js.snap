@@ -1,47 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Can produce OOML from joe_java/axiom_of_power.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">∀A∃P∀B</m:t>
+        <m:t xml:space="preserve">∀A∃P∀B</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\"> </m:t>
+        <m:t xml:space="preserve"> </m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">[</m:t>
+        <m:t xml:space="preserve">[</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">B∈P⟺∀C</m:t>
+        <m:t xml:space="preserve">B∈P⟺∀C</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\"> </m:t>
+        <m:t xml:space="preserve"> </m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">(</m:t>
+        <m:t xml:space="preserve">(</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">C∈B⇒C∈A</m:t>
+        <m:t xml:space="preserve">C∈B⇒C∈A</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">)</m:t>
+        <m:t xml:space="preserve">)</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">]</m:t>
+        <m:t xml:space="preserve">]</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from joe_java/binomial_coefficient.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">C</m:t>
+        <m:t xml:space="preserve">C</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">(n,k)</m:t>
+        <m:t xml:space="preserve">(n,k)</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">=</m:t>
+        <m:t xml:space="preserve">=</m:t>
     </m:r>
     <m:sSubSup>
         <m:sSubSupPr>
@@ -49,96 +49,96 @@ exports[`Can produce OOML from joe_java/binomial_coefficient.mml 1`] = `
         </m:sSubSupPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">C</m:t>
+                <m:t xml:space="preserve">C</m:t>
             </m:r>
         </m:e>
         <m:sub>
             <m:r>
-                <m:t xml:space=\\"preserve\\">k</m:t>
+                <m:t xml:space="preserve">k</m:t>
             </m:r>
         </m:sub>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n</m:t>
+                <m:t xml:space="preserve">n</m:t>
             </m:r>
         </m:sup>
     </m:sSubSup>
     <m:r>
-        <m:t xml:space=\\"preserve\\">=</m:t>
+        <m:t xml:space="preserve">=</m:t>
     </m:r>
     <m:sPre>
         <m:e>
             <m:sSub>
                 <m:e>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">C</m:t>
+                        <m:t xml:space="preserve">C</m:t>
                     </m:r>
                 </m:e>
                 <m:sub>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">k</m:t>
+                        <m:t xml:space="preserve">k</m:t>
                     </m:r>
                 </m:sub>
             </m:sSub>
         </m:e>
         <m:sub>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n</m:t>
+                <m:t xml:space="preserve">n</m:t>
             </m:r>
         </m:sub>
         <m:sup/>
     </m:sPre>
     <m:r>
-        <m:t xml:space=\\"preserve\\">=</m:t>
+        <m:t xml:space="preserve">=</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">(</m:t>
+        <m:t xml:space="preserve">(</m:t>
     </m:r>
     <m:f>
         <m:fPr>
-            <m:type m:val=\\"noBar\\"/>
+            <m:type m:val="noBar"/>
         </m:fPr>
         <m:num>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n</m:t>
+                <m:t xml:space="preserve">n</m:t>
             </m:r>
         </m:num>
         <m:den>
             <m:r>
-                <m:t xml:space=\\"preserve\\">k</m:t>
+                <m:t xml:space="preserve">k</m:t>
             </m:r>
         </m:den>
     </m:f>
     <m:r>
-        <m:t xml:space=\\"preserve\\">)</m:t>
+        <m:t xml:space="preserve">)</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">=</m:t>
+        <m:t xml:space="preserve">=</m:t>
     </m:r>
     <m:f>
         <m:fPr>
-            <m:type m:val=\\"bar\\"/>
+            <m:type m:val="bar"/>
         </m:fPr>
         <m:num>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n!</m:t>
+                <m:t xml:space="preserve">n!</m:t>
             </m:r>
         </m:num>
         <m:den>
             <m:r>
-                <m:t xml:space=\\"preserve\\">k!</m:t>
+                <m:t xml:space="preserve">k!</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">(</m:t>
+                <m:t xml:space="preserve">(</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n−k</m:t>
+                <m:t xml:space="preserve">n−k</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">)</m:t>
+                <m:t xml:space="preserve">)</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">!</m:t>
+                <m:t xml:space="preserve">!</m:t>
             </m:r>
         </m:den>
     </m:f>
@@ -146,16 +146,16 @@ exports[`Can produce OOML from joe_java/binomial_coefficient.mml 1`] = `
 `;
 
 exports[`Can produce OOML from joe_java/boolean_algebra.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
         <m:rPr>
             <m:nor/>
         </m:rPr>
-        <m:t xml:space=\\"preserve\\">Boolean algebra:</m:t>
+        <m:t xml:space="preserve">Boolean algebra: </m:t>
     </m:r>
     <m:bar>
         <m:barPr>
-            <m:pos m:val=\\"top\\"/>
+            <m:pos m:val="top"/>
         </m:barPr>
         <m:e>
             <m:sSup>
@@ -165,20 +165,20 @@ exports[`Can produce OOML from joe_java/boolean_algebra.mml 1`] = `
                 <m:e>
                     <m:nary>
                         <m:naryPr>
-                            <m:chr m:val=\\"⋃\\"/>
-                            <m:limLoc m:val=\\"undOvr\\"/>
-                            <m:grow m:val=\\"1\\"/>
-                            <m:subHide m:val=\\"off\\"/>
-                            <m:supHide m:val=\\"off\\"/>
+                            <m:chr m:val="⋃"/>
+                            <m:limLoc m:val="undOvr"/>
+                            <m:grow m:val="1"/>
+                            <m:subHide m:val="off"/>
+                            <m:supHide m:val="off"/>
                         </m:naryPr>
                         <m:sub>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">i=1</m:t>
+                                <m:t xml:space="preserve">i=1</m:t>
                             </m:r>
                         </m:sub>
                         <m:sup>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">n</m:t>
+                                <m:t xml:space="preserve">n</m:t>
                             </m:r>
                         </m:sup>
                         <m:e/>
@@ -189,12 +189,12 @@ exports[`Can produce OOML from joe_java/boolean_algebra.mml 1`] = `
                         </m:sSubPr>
                         <m:e>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">A</m:t>
+                                <m:t xml:space="preserve">A</m:t>
                             </m:r>
                         </m:e>
                         <m:sub>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">i</m:t>
+                                <m:t xml:space="preserve">i</m:t>
                             </m:r>
                         </m:sub>
                     </m:sSub>
@@ -204,31 +204,31 @@ exports[`Can produce OOML from joe_java/boolean_algebra.mml 1`] = `
         </m:e>
     </m:bar>
     <m:r>
-        <m:t xml:space=\\"preserve\\">=</m:t>
+        <m:t xml:space="preserve">=</m:t>
     </m:r>
     <m:nary>
         <m:naryPr>
-            <m:chr m:val=\\"⋂\\"/>
-            <m:limLoc m:val=\\"undOvr\\"/>
-            <m:grow m:val=\\"1\\"/>
-            <m:subHide m:val=\\"off\\"/>
-            <m:supHide m:val=\\"off\\"/>
+            <m:chr m:val="⋂"/>
+            <m:limLoc m:val="undOvr"/>
+            <m:grow m:val="1"/>
+            <m:subHide m:val="off"/>
+            <m:supHide m:val="off"/>
         </m:naryPr>
         <m:sub>
             <m:r>
-                <m:t xml:space=\\"preserve\\">i=1</m:t>
+                <m:t xml:space="preserve">i=1</m:t>
             </m:r>
         </m:sub>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n</m:t>
+                <m:t xml:space="preserve">n</m:t>
             </m:r>
         </m:sup>
         <m:e/>
     </m:nary>
     <m:bar>
         <m:barPr>
-            <m:pos m:val=\\"top\\"/>
+            <m:pos m:val="top"/>
         </m:barPr>
         <m:e>
             <m:sSup>
@@ -242,12 +242,12 @@ exports[`Can produce OOML from joe_java/boolean_algebra.mml 1`] = `
                         </m:sSubPr>
                         <m:e>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">A</m:t>
+                                <m:t xml:space="preserve">A</m:t>
                             </m:r>
                         </m:e>
                         <m:sub>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">i</m:t>
+                                <m:t xml:space="preserve">i</m:t>
                             </m:r>
                         </m:sub>
                     </m:sSub>
@@ -260,32 +260,32 @@ exports[`Can produce OOML from joe_java/boolean_algebra.mml 1`] = `
 `;
 
 exports[`Can produce OOML from joe_java/complex_number.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">c=</m:t>
+        <m:t xml:space="preserve">c=</m:t>
     </m:r>
     <m:limUpp>
         <m:e>
             <m:groupChr>
                 <m:groupChrPr>
-                    <m:chr m:val=\\"⏞\\" m:pos=\\"top\\"/>
+                    <m:chr m:val="⏞" m:pos="top"/>
                 </m:groupChrPr>
                 <m:e>
                     <m:limLow>
                         <m:e>
                             <m:groupChr>
                                 <m:groupChrPr>
-                                    <m:chr m:val=\\"⏟\\" m:pos=\\"bot\\"/>
+                                    <m:chr m:val="⏟" m:pos="bot"/>
                                 </m:groupChrPr>
                                 <m:e>
                                     <m:r>
-                                        <m:t xml:space=\\"preserve\\"> </m:t>
+                                        <m:t xml:space="preserve"> </m:t>
                                     </m:r>
                                     <m:r>
-                                        <m:t xml:space=\\"preserve\\">a</m:t>
+                                        <m:t xml:space="preserve">a</m:t>
                                     </m:r>
                                     <m:r>
-                                        <m:t xml:space=\\"preserve\\"> </m:t>
+                                        <m:t xml:space="preserve"> </m:t>
                                     </m:r>
                                 </m:e>
                             </m:groupChr>
@@ -295,28 +295,28 @@ exports[`Can produce OOML from joe_java/complex_number.mml 1`] = `
                                 <m:rPr>
                                     <m:nor/>
                                 </m:rPr>
-                                <m:t xml:space=\\"preserve\\">real</m:t>
+                                <m:t xml:space="preserve">real</m:t>
                             </m:r>
                         </m:lim>
                     </m:limLow>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">+</m:t>
+                        <m:t xml:space="preserve">+</m:t>
                     </m:r>
                     <m:limLow>
                         <m:e>
                             <m:groupChr>
                                 <m:groupChrPr>
-                                    <m:chr m:val=\\"⏟\\" m:pos=\\"bot\\"/>
+                                    <m:chr m:val="⏟" m:pos="bot"/>
                                 </m:groupChrPr>
                                 <m:e>
                                     <m:r>
-                                        <m:t xml:space=\\"preserve\\"> </m:t>
+                                        <m:t xml:space="preserve"> </m:t>
                                     </m:r>
                                     <m:r>
-                                        <m:t xml:space=\\"preserve\\">bⅈ</m:t>
+                                        <m:t xml:space="preserve">bⅈ</m:t>
                                     </m:r>
                                     <m:r>
-                                        <m:t xml:space=\\"preserve\\"> </m:t>
+                                        <m:t xml:space="preserve"> </m:t>
                                     </m:r>
                                 </m:e>
                             </m:groupChr>
@@ -326,7 +326,7 @@ exports[`Can produce OOML from joe_java/complex_number.mml 1`] = `
                                 <m:rPr>
                                     <m:nor/>
                                 </m:rPr>
-                                <m:t xml:space=\\"preserve\\">imaginary</m:t>
+                                <m:t xml:space="preserve">imaginary</m:t>
                             </m:r>
                         </m:lim>
                     </m:limLow>
@@ -338,7 +338,7 @@ exports[`Can produce OOML from joe_java/complex_number.mml 1`] = `
                 <m:rPr>
                     <m:nor/>
                 </m:rPr>
-                <m:t xml:space=\\"preserve\\">complex number</m:t>
+                <m:t xml:space="preserve">complex number</m:t>
             </m:r>
         </m:lim>
     </m:limUpp>
@@ -346,77 +346,77 @@ exports[`Can produce OOML from joe_java/complex_number.mml 1`] = `
 `;
 
 exports[`Can produce OOML from joe_java/demorgan.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
         <m:rPr>
             <m:nor/>
         </m:rPr>
-        <m:t xml:space=\\"preserve\\">Logic:</m:t>
+        <m:t xml:space="preserve">Logic: </m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">¬</m:t>
+        <m:t xml:space="preserve">¬</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">(</m:t>
+        <m:t xml:space="preserve">(</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">p∧q</m:t>
+        <m:t xml:space="preserve">p∧q</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">)</m:t>
+        <m:t xml:space="preserve">)</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">⟺</m:t>
+        <m:t xml:space="preserve">⟺</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">(</m:t>
+        <m:t xml:space="preserve">(</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">¬p</m:t>
+        <m:t xml:space="preserve">¬p</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">)</m:t>
+        <m:t xml:space="preserve">)</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">∨</m:t>
+        <m:t xml:space="preserve">∨</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">(</m:t>
+        <m:t xml:space="preserve">(</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">¬q</m:t>
+        <m:t xml:space="preserve">¬q</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">)</m:t>
+        <m:t xml:space="preserve">)</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from joe_java/divergence.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">∇·</m:t>
+        <m:t xml:space="preserve">∇·</m:t>
     </m:r>
     <m:acc>
         <m:accPr>
-            <m:chr m:val=\\"⃗\\"/>
+            <m:chr m:val="⃗"/>
         </m:accPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">v</m:t>
+                <m:t xml:space="preserve">v</m:t>
             </m:r>
         </m:e>
     </m:acc>
     <m:r>
-        <m:t xml:space=\\"preserve\\">=</m:t>
+        <m:t xml:space="preserve">=</m:t>
     </m:r>
     <m:f>
         <m:fPr>
-            <m:type m:val=\\"bar\\"/>
+            <m:type m:val="bar"/>
         </m:fPr>
         <m:num>
             <m:r>
-                <m:t xml:space=\\"preserve\\">∂</m:t>
+                <m:t xml:space="preserve">∂</m:t>
             </m:r>
             <m:sSub>
                 <m:sSubPr>
@@ -424,32 +424,32 @@ exports[`Can produce OOML from joe_java/divergence.mml 1`] = `
                 </m:sSubPr>
                 <m:e>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">v</m:t>
+                        <m:t xml:space="preserve">v</m:t>
                     </m:r>
                 </m:e>
                 <m:sub>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">x</m:t>
+                        <m:t xml:space="preserve">x</m:t>
                     </m:r>
                 </m:sub>
             </m:sSub>
         </m:num>
         <m:den>
             <m:r>
-                <m:t xml:space=\\"preserve\\">∂x</m:t>
+                <m:t xml:space="preserve">∂x</m:t>
             </m:r>
         </m:den>
     </m:f>
     <m:r>
-        <m:t xml:space=\\"preserve\\">+</m:t>
+        <m:t xml:space="preserve">+</m:t>
     </m:r>
     <m:f>
         <m:fPr>
-            <m:type m:val=\\"bar\\"/>
+            <m:type m:val="bar"/>
         </m:fPr>
         <m:num>
             <m:r>
-                <m:t xml:space=\\"preserve\\">∂</m:t>
+                <m:t xml:space="preserve">∂</m:t>
             </m:r>
             <m:sSub>
                 <m:sSubPr>
@@ -457,32 +457,32 @@ exports[`Can produce OOML from joe_java/divergence.mml 1`] = `
                 </m:sSubPr>
                 <m:e>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">v</m:t>
+                        <m:t xml:space="preserve">v</m:t>
                     </m:r>
                 </m:e>
                 <m:sub>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">y</m:t>
+                        <m:t xml:space="preserve">y</m:t>
                     </m:r>
                 </m:sub>
             </m:sSub>
         </m:num>
         <m:den>
             <m:r>
-                <m:t xml:space=\\"preserve\\">∂y</m:t>
+                <m:t xml:space="preserve">∂y</m:t>
             </m:r>
         </m:den>
     </m:f>
     <m:r>
-        <m:t xml:space=\\"preserve\\">+</m:t>
+        <m:t xml:space="preserve">+</m:t>
     </m:r>
     <m:f>
         <m:fPr>
-            <m:type m:val=\\"bar\\"/>
+            <m:type m:val="bar"/>
         </m:fPr>
         <m:num>
             <m:r>
-                <m:t xml:space=\\"preserve\\">∂</m:t>
+                <m:t xml:space="preserve">∂</m:t>
             </m:r>
             <m:sSub>
                 <m:sSubPr>
@@ -490,19 +490,19 @@ exports[`Can produce OOML from joe_java/divergence.mml 1`] = `
                 </m:sSubPr>
                 <m:e>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">v</m:t>
+                        <m:t xml:space="preserve">v</m:t>
                     </m:r>
                 </m:e>
                 <m:sub>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">z</m:t>
+                        <m:t xml:space="preserve">z</m:t>
                     </m:r>
                 </m:sub>
             </m:sSub>
         </m:num>
         <m:den>
             <m:r>
-                <m:t xml:space=\\"preserve\\">∂z</m:t>
+                <m:t xml:space="preserve">∂z</m:t>
             </m:r>
         </m:den>
     </m:f>
@@ -510,22 +510,22 @@ exports[`Can produce OOML from joe_java/divergence.mml 1`] = `
 `;
 
 exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">M=</m:t>
+        <m:t xml:space="preserve">M=</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">[</m:t>
+        <m:t xml:space="preserve">[</m:t>
     </m:r>
     <m:m>
         <m:mPr>
-            <m:baseJc m:val=\\"center\\"/>
-            <m:plcHide m:val=\\"on\\"/>
+            <m:baseJc m:val="center"/>
+            <m:plcHide m:val="on"/>
             <m:mcs>
                 <m:mc>
                     <m:mcPr>
-                        <m:count m:val=\\"4\\"/>
-                        <m:mcJc m:val=\\"center\\"/>
+                        <m:count m:val="4"/>
+                        <m:mcJc m:val="center"/>
                     </m:mcPr>
                 </m:mc>
             </m:mcs>
@@ -538,12 +538,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">1</m:t>
+                            <m:t xml:space="preserve">1</m:t>
                         </m:r>
                     </m:sub>
                 </m:sSub>
@@ -555,24 +555,24 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">1</m:t>
+                            <m:t xml:space="preserve">1</m:t>
                         </m:r>
                     </m:sub>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">q</m:t>
+                            <m:t xml:space="preserve">q</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSubSup>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">…</m:t>
+                    <m:t xml:space="preserve">…</m:t>
                 </m:r>
             </m:e>
             <m:e>
@@ -582,12 +582,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">1</m:t>
+                            <m:t xml:space="preserve">1</m:t>
                         </m:r>
                     </m:sub>
                     <m:sup>
@@ -597,12 +597,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                             </m:sSupPr>
                             <m:e>
                                 <m:r>
-                                    <m:t xml:space=\\"preserve\\">q</m:t>
+                                    <m:t xml:space="preserve">q</m:t>
                                 </m:r>
                             </m:e>
                             <m:sup>
                                 <m:r>
-                                    <m:t xml:space=\\"preserve\\">n−1</m:t>
+                                    <m:t xml:space="preserve">n−1</m:t>
                                 </m:r>
                             </m:sup>
                         </m:sSup>
@@ -618,12 +618,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sub>
                 </m:sSub>
@@ -635,24 +635,24 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sub>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">q</m:t>
+                            <m:t xml:space="preserve">q</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSubSup>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">…</m:t>
+                    <m:t xml:space="preserve">…</m:t>
                 </m:r>
             </m:e>
             <m:e>
@@ -662,12 +662,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sub>
                     <m:sup>
@@ -677,12 +677,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                             </m:sSupPr>
                             <m:e>
                                 <m:r>
-                                    <m:t xml:space=\\"preserve\\">q</m:t>
+                                    <m:t xml:space="preserve">q</m:t>
                                 </m:r>
                             </m:e>
                             <m:sup>
                                 <m:r>
-                                    <m:t xml:space=\\"preserve\\">n−1</m:t>
+                                    <m:t xml:space="preserve">n−1</m:t>
                                 </m:r>
                             </m:sup>
                         </m:sSup>
@@ -693,22 +693,22 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
         <m:mr>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">⋮</m:t>
+                    <m:t xml:space="preserve">⋮</m:t>
                 </m:r>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">⋮</m:t>
+                    <m:t xml:space="preserve">⋮</m:t>
                 </m:r>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">⋱</m:t>
+                    <m:t xml:space="preserve">⋱</m:t>
                 </m:r>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">⋮</m:t>
+                    <m:t xml:space="preserve">⋮</m:t>
                 </m:r>
             </m:e>
         </m:mr>
@@ -720,12 +720,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">m</m:t>
+                            <m:t xml:space="preserve">m</m:t>
                         </m:r>
                     </m:sub>
                 </m:sSub>
@@ -737,24 +737,24 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">m</m:t>
+                            <m:t xml:space="preserve">m</m:t>
                         </m:r>
                     </m:sub>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">q</m:t>
+                            <m:t xml:space="preserve">q</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSubSup>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">…</m:t>
+                    <m:t xml:space="preserve">…</m:t>
                 </m:r>
             </m:e>
             <m:e>
@@ -764,12 +764,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                     </m:sSubSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">α</m:t>
+                            <m:t xml:space="preserve">α</m:t>
                         </m:r>
                     </m:e>
                     <m:sub>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">m</m:t>
+                            <m:t xml:space="preserve">m</m:t>
                         </m:r>
                     </m:sub>
                     <m:sup>
@@ -779,12 +779,12 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
                             </m:sSupPr>
                             <m:e>
                                 <m:r>
-                                    <m:t xml:space=\\"preserve\\">q</m:t>
+                                    <m:t xml:space="preserve">q</m:t>
                                 </m:r>
                             </m:e>
                             <m:sup>
                                 <m:r>
-                                    <m:t xml:space=\\"preserve\\">n−1</m:t>
+                                    <m:t xml:space="preserve">n−1</m:t>
                                 </m:r>
                             </m:sup>
                         </m:sSup>
@@ -794,30 +794,30 @@ exports[`Can produce OOML from joe_java/matrix.mml 1`] = `
         </m:mr>
     </m:m>
     <m:r>
-        <m:t xml:space=\\"preserve\\">]</m:t>
+        <m:t xml:space="preserve">]</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from joe_java/pythagorean.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:sSup>
         <m:sSupPr>
             <m:ctrlPr/>
         </m:sSupPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">a</m:t>
+                <m:t xml:space="preserve">a</m:t>
             </m:r>
         </m:e>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">2</m:t>
+                <m:t xml:space="preserve">2</m:t>
             </m:r>
         </m:sup>
     </m:sSup>
     <m:r>
-        <m:t xml:space=\\"preserve\\">+</m:t>
+        <m:t xml:space="preserve">+</m:t>
     </m:r>
     <m:sSup>
         <m:sSupPr>
@@ -825,17 +825,17 @@ exports[`Can produce OOML from joe_java/pythagorean.mml 1`] = `
         </m:sSupPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">b</m:t>
+                <m:t xml:space="preserve">b</m:t>
             </m:r>
         </m:e>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">2</m:t>
+                <m:t xml:space="preserve">2</m:t>
             </m:r>
         </m:sup>
     </m:sSup>
     <m:r>
-        <m:t xml:space=\\"preserve\\">=</m:t>
+        <m:t xml:space="preserve">=</m:t>
     </m:r>
     <m:sSup>
         <m:sSupPr>
@@ -843,12 +843,12 @@ exports[`Can produce OOML from joe_java/pythagorean.mml 1`] = `
         </m:sSupPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">c</m:t>
+                <m:t xml:space="preserve">c</m:t>
             </m:r>
         </m:e>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">2</m:t>
+                <m:t xml:space="preserve">2</m:t>
             </m:r>
         </m:sup>
     </m:sSup>
@@ -856,16 +856,16 @@ exports[`Can produce OOML from joe_java/pythagorean.mml 1`] = `
 `;
 
 exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:m>
         <m:mPr>
-            <m:baseJc m:val=\\"center\\"/>
-            <m:plcHide m:val=\\"on\\"/>
+            <m:baseJc m:val="center"/>
+            <m:plcHide m:val="on"/>
             <m:mcs>
                 <m:mc>
                     <m:mcPr>
-                        <m:count m:val=\\"3\\"/>
-                        <m:mcJc m:val=\\"center\\"/>
+                        <m:count m:val="3"/>
+                        <m:mcJc m:val="center"/>
                     </m:mcPr>
                 </m:mc>
             </m:mcs>
@@ -878,19 +878,19 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">(a+b)</m:t>
+                            <m:t xml:space="preserve">(a+b)</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">=</m:t>
+                    <m:t xml:space="preserve">=</m:t>
                 </m:r>
             </m:e>
             <m:e>
@@ -900,35 +900,35 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">c</m:t>
+                            <m:t xml:space="preserve">c</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">+4⋅(</m:t>
+                    <m:t xml:space="preserve">+4⋅(</m:t>
                 </m:r>
                 <m:f>
                     <m:fPr>
-                        <m:type m:val=\\"bar\\"/>
+                        <m:type m:val="bar"/>
                     </m:fPr>
                     <m:num>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">1</m:t>
+                            <m:t xml:space="preserve">1</m:t>
                         </m:r>
                     </m:num>
                     <m:den>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:den>
                 </m:f>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">ab)</m:t>
+                    <m:t xml:space="preserve">ab)</m:t>
                 </m:r>
             </m:e>
         </m:mr>
@@ -940,17 +940,17 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">a</m:t>
+                            <m:t xml:space="preserve">a</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">+2ab+</m:t>
+                    <m:t xml:space="preserve">+2ab+</m:t>
                 </m:r>
                 <m:sSup>
                     <m:sSupPr>
@@ -958,19 +958,19 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">b</m:t>
+                            <m:t xml:space="preserve">b</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">=</m:t>
+                    <m:t xml:space="preserve">=</m:t>
                 </m:r>
             </m:e>
             <m:e>
@@ -980,17 +980,17 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">c</m:t>
+                            <m:t xml:space="preserve">c</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">+2ab</m:t>
+                    <m:t xml:space="preserve">+2ab</m:t>
                 </m:r>
             </m:e>
         </m:mr>
@@ -1002,17 +1002,17 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">a</m:t>
+                            <m:t xml:space="preserve">a</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">+</m:t>
+                    <m:t xml:space="preserve">+</m:t>
                 </m:r>
                 <m:sSup>
                     <m:sSupPr>
@@ -1020,19 +1020,19 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">b</m:t>
+                            <m:t xml:space="preserve">b</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
             </m:e>
             <m:e>
                 <m:r>
-                    <m:t xml:space=\\"preserve\\">=</m:t>
+                    <m:t xml:space="preserve">=</m:t>
                 </m:r>
             </m:e>
             <m:e>
@@ -1042,12 +1042,12 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
                     </m:sSupPr>
                     <m:e>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">c</m:t>
+                            <m:t xml:space="preserve">c</m:t>
                         </m:r>
                     </m:e>
                     <m:sup>
                         <m:r>
-                            <m:t xml:space=\\"preserve\\">2</m:t>
+                            <m:t xml:space="preserve">2</m:t>
                         </m:r>
                     </m:sup>
                 </m:sSup>
@@ -1058,21 +1058,21 @@ exports[`Can produce OOML from joe_java/pythagorean2.mml 1`] = `
 `;
 
 exports[`Can produce OOML from joe_java/quadratic_formula.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">x=</m:t>
+        <m:t xml:space="preserve">x=</m:t>
     </m:r>
     <m:f>
         <m:fPr>
-            <m:type m:val=\\"bar\\"/>
+            <m:type m:val="bar"/>
         </m:fPr>
         <m:num>
             <m:r>
-                <m:t xml:space=\\"preserve\\">−b±</m:t>
+                <m:t xml:space="preserve">−b±</m:t>
             </m:r>
             <m:rad>
                 <m:radPr>
-                    <m:degHide m:val=\\"on\\"/>
+                    <m:degHide m:val="on"/>
                 </m:radPr>
                 <m:deg/>
                 <m:e>
@@ -1082,24 +1082,24 @@ exports[`Can produce OOML from joe_java/quadratic_formula.mml 1`] = `
                         </m:sSupPr>
                         <m:e>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">b</m:t>
+                                <m:t xml:space="preserve">b</m:t>
                             </m:r>
                         </m:e>
                         <m:sup>
                             <m:r>
-                                <m:t xml:space=\\"preserve\\">2</m:t>
+                                <m:t xml:space="preserve">2</m:t>
                             </m:r>
                         </m:sup>
                     </m:sSup>
                     <m:r>
-                        <m:t xml:space=\\"preserve\\">−4ac</m:t>
+                        <m:t xml:space="preserve">−4ac</m:t>
                     </m:r>
                 </m:e>
             </m:rad>
         </m:num>
         <m:den>
             <m:r>
-                <m:t xml:space=\\"preserve\\">2a</m:t>
+                <m:t xml:space="preserve">2a</m:t>
             </m:r>
         </m:den>
     </m:f>
@@ -1107,23 +1107,23 @@ exports[`Can produce OOML from joe_java/quadratic_formula.mml 1`] = `
 `;
 
 exports[`Can produce OOML from joe_java/sophomores_dream.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:nary>
         <m:naryPr>
-            <m:chr m:val=\\"∫\\"/>
-            <m:limLoc m:val=\\"subSup\\"/>
-            <m:grow m:val=\\"1\\"/>
-            <m:subHide m:val=\\"off\\"/>
-            <m:supHide m:val=\\"off\\"/>
+            <m:chr m:val="∫"/>
+            <m:limLoc m:val="subSup"/>
+            <m:grow m:val="1"/>
+            <m:subHide m:val="off"/>
+            <m:supHide m:val="off"/>
         </m:naryPr>
         <m:sub>
             <m:r>
-                <m:t xml:space=\\"preserve\\">0</m:t>
+                <m:t xml:space="preserve">0</m:t>
             </m:r>
         </m:sub>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">1</m:t>
+                <m:t xml:space="preserve">1</m:t>
             </m:r>
         </m:sup>
         <m:e/>
@@ -1134,34 +1134,34 @@ exports[`Can produce OOML from joe_java/sophomores_dream.mml 1`] = `
         </m:sSupPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">x</m:t>
+                <m:t xml:space="preserve">x</m:t>
             </m:r>
         </m:e>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">x</m:t>
+                <m:t xml:space="preserve">x</m:t>
             </m:r>
         </m:sup>
     </m:sSup>
     <m:r>
-        <m:t xml:space=\\"preserve\\">ⅆx=</m:t>
+        <m:t xml:space="preserve">ⅆx=</m:t>
     </m:r>
     <m:nary>
         <m:naryPr>
-            <m:chr m:val=\\"∑\\"/>
-            <m:limLoc m:val=\\"undOvr\\"/>
-            <m:grow m:val=\\"1\\"/>
-            <m:subHide m:val=\\"off\\"/>
-            <m:supHide m:val=\\"off\\"/>
+            <m:chr m:val="∑"/>
+            <m:limLoc m:val="undOvr"/>
+            <m:grow m:val="1"/>
+            <m:subHide m:val="off"/>
+            <m:supHide m:val="off"/>
         </m:naryPr>
         <m:sub>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n=1</m:t>
+                <m:t xml:space="preserve">n=1</m:t>
             </m:r>
         </m:sub>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">∞</m:t>
+                <m:t xml:space="preserve">∞</m:t>
             </m:r>
         </m:sup>
         <m:e/>
@@ -1172,23 +1172,23 @@ exports[`Can produce OOML from joe_java/sophomores_dream.mml 1`] = `
         </m:sSupPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">(</m:t>
+                <m:t xml:space="preserve">(</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">−1</m:t>
+                <m:t xml:space="preserve">−1</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">)</m:t>
+                <m:t xml:space="preserve">)</m:t>
             </m:r>
         </m:e>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n+1</m:t>
+                <m:t xml:space="preserve">n+1</m:t>
             </m:r>
         </m:sup>
     </m:sSup>
     <m:r>
-        <m:t xml:space=\\"preserve\\"></m:t>
+        <m:t xml:space="preserve"></m:t>
     </m:r>
     <m:sSup>
         <m:sSupPr>
@@ -1196,12 +1196,12 @@ exports[`Can produce OOML from joe_java/sophomores_dream.mml 1`] = `
         </m:sSupPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">n</m:t>
+                <m:t xml:space="preserve">n</m:t>
             </m:r>
         </m:e>
         <m:sup>
             <m:r>
-                <m:t xml:space=\\"preserve\\">−n</m:t>
+                <m:t xml:space="preserve">−n</m:t>
             </m:r>
         </m:sup>
     </m:sSup>
@@ -1209,14 +1209,14 @@ exports[`Can produce OOML from joe_java/sophomores_dream.mml 1`] = `
 `;
 
 exports[`Can produce OOML from mathml2omml/groupchr.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:groupChr>
         <m:groupChrPr>
-            <m:chr m:val=\\"b\\" m:pos=\\"bot\\"/>
+            <m:chr m:val="b" m:pos="bot"/>
         </m:groupChrPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">a</m:t>
+                <m:t xml:space="preserve">a</m:t>
             </m:r>
         </m:e>
     </m:groupChr>
@@ -1224,239 +1224,239 @@ exports[`Can produce OOML from mathml2omml/groupchr.mml 1`] = `
 `;
 
 exports[`Can produce OOML from mathml2omml/menclose.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:rad>
         <m:radPr>
-            <m:degHide m:val=\\"on\\"/>
+            <m:degHide m:val="on"/>
         </m:radPr>
         <m:deg/>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">a+b</m:t>
+                <m:t xml:space="preserve">a+b</m:t>
             </m:r>
         </m:e>
     </m:rad>
     <m:rad>
         <m:radPr>
-            <m:degHide m:val=\\"on\\"/>
+            <m:degHide m:val="on"/>
         </m:radPr>
         <m:deg/>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">c+d</m:t>
+                <m:t xml:space="preserve">c+d</m:t>
             </m:r>
         </m:e>
     </m:rad>
     <m:borderBox>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">e+f</m:t>
+                <m:t xml:space="preserve">e+f</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">g+h</m:t>
+                <m:t xml:space="preserve">g+h</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">i+j</m:t>
-            </m:r>
-        </m:e>
-    </m:borderBox>
-    <m:borderBox>
-        <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
-        </m:borderBoxPr>
-        <m:e>
-            <m:r>
-                <m:t xml:space=\\"preserve\\">k+l</m:t>
+                <m:t xml:space="preserve">i+j</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideRight m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">m+n</m:t>
+                <m:t xml:space="preserve">k+l</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">o+p</m:t>
+                <m:t xml:space="preserve">m+n</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideRight m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">q+r</m:t>
+                <m:t xml:space="preserve">o+p</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">s+t</m:t>
+                <m:t xml:space="preserve">q+r</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">u+v</m:t>
+                <m:t xml:space="preserve">s+t</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
-            <m:strikeBLTR m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">w+x</m:t>
+                <m:t xml:space="preserve">u+v</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
-            <m:strikeTLBR m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
+            <m:strikeBLTR m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">y+z</m:t>
+                <m:t xml:space="preserve">w+x</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
-            <m:strikeV m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
+            <m:strikeTLBR m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">aa+bb</m:t>
+                <m:t xml:space="preserve">y+z</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
-            <m:strikeH m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
+            <m:strikeV m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">cc+dd</m:t>
+                <m:t xml:space="preserve">aa+bb</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
+            <m:strikeH m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">ee+ff</m:t>
+                <m:t xml:space="preserve">cc+dd</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">gg+hh</m:t>
+                <m:t xml:space="preserve">ee+ff</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">ii+jj</m:t>
+                <m:t xml:space="preserve">gg+hh</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">kk+ll</m:t>
+                <m:t xml:space="preserve">ii+jj</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
     <m:borderBox>
         <m:borderBoxPr>
-            <m:hideTop m:val=\\"on\\"/>
-            <m:hideBot m:val=\\"on\\"/>
-            <m:hideLeft m:val=\\"on\\"/>
-            <m:hideRight m:val=\\"on\\"/>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
         </m:borderBoxPr>
         <m:e>
             <m:r>
-                <m:t xml:space=\\"preserve\\">mm+nn</m:t>
+                <m:t xml:space="preserve">kk+ll</m:t>
+            </m:r>
+        </m:e>
+    </m:borderBox>
+    <m:borderBox>
+        <m:borderBoxPr>
+            <m:hideTop m:val="on"/>
+            <m:hideBot m:val="on"/>
+            <m:hideLeft m:val="on"/>
+            <m:hideRight m:val="on"/>
+        </m:borderBoxPr>
+        <m:e>
+            <m:r>
+                <m:t xml:space="preserve">mm+nn</m:t>
             </m:r>
         </m:e>
     </m:borderBox>
@@ -1464,71 +1464,71 @@ exports[`Can produce OOML from mathml2omml/menclose.mml 1`] = `
 `;
 
 exports[`Can produce OOML from mathml2omml/ms.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">2</m:t>
+        <m:t xml:space="preserve">2</m:t>
     </m:r>
     <m:r>
         <m:rPr>
-            <m:sty m:val=\\"p\\"/>
+            <m:sty m:val="p"/>
         </m:rPr>
-        <m:t xml:space=\\"preserve\\">\\"abc\\"</m:t>
+        <m:t xml:space="preserve">"abc"</m:t>
     </m:r>
     <m:r>
         <m:rPr>
             <m:nor/>
         </m:rPr>
-        <m:t xml:space=\\"preserve\\">text</m:t>
+        <m:t xml:space="preserve">text</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from mathml2omml/mstyle.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:limLow>
         <m:e>
             <m:argPr>
-                <m:scrLvl m:val=\\"2\\"/>
+                <m:scrLvl m:val="2"/>
             </m:argPr>
             <m:r>
-                <m:t xml:space=\\"preserve\\">a</m:t>
+                <m:t xml:space="preserve">a</m:t>
             </m:r>
         </m:e>
         <m:lim>
             <m:argPr>
-                <m:scrLvl m:val=\\"2\\"/>
+                <m:scrLvl m:val="2"/>
             </m:argPr>
             <m:r>
-                <m:t xml:space=\\"preserve\\">2</m:t>
+                <m:t xml:space="preserve">2</m:t>
             </m:r>
         </m:lim>
     </m:limLow>
     <m:r>
-        <m:t xml:space=\\"preserve\\">+2=4</m:t>
+        <m:t xml:space="preserve">+2=4</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from mathml2omml/simple.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:f>
         <m:fPr>
-            <m:type m:val=\\"bar\\"/>
+            <m:type m:val="bar"/>
         </m:fPr>
         <m:num>
             <m:r>
-                <m:t xml:space=\\"preserve\\">(</m:t>
+                <m:t xml:space="preserve">(</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">4x−6n</m:t>
+                <m:t xml:space="preserve">4x−6n</m:t>
             </m:r>
             <m:r>
-                <m:t xml:space=\\"preserve\\">)</m:t>
+                <m:t xml:space="preserve">)</m:t>
             </m:r>
         </m:num>
         <m:den>
             <m:r>
-                <m:t xml:space=\\"preserve\\">34</m:t>
+                <m:t xml:space="preserve">34</m:t>
             </m:r>
         </m:den>
     </m:f>
@@ -1536,41 +1536,41 @@ exports[`Can produce OOML from mathml2omml/simple.mml 1`] = `
 `;
 
 exports[`Can produce OOML from mathml2omml/single_line.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">2+2=4</m:t>
+        <m:t xml:space="preserve">2+2=4</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from mathml2omml/single_line_with_glyph.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
         <m:rPr>
             <m:nor/>
         </m:rPr>
-        <m:t xml:space=\\"preserve\\">GothicCapitalR</m:t>
+        <m:t xml:space="preserve">GothicCapitalR</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">+2=4</m:t>
+        <m:t xml:space="preserve">+2=4</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from mathml2omml/single_line_with_styling.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
         <w:rPr>
             <w:b/>
         </w:rPr>
         <m:rPr>
             <m:nor/>
-            <m:sty m:val=\\"b\\"/>
+            <m:sty m:val="b"/>
         </m:rPr>
-        <m:t xml:space=\\"preserve\\">x</m:t>
+        <m:t xml:space="preserve">x</m:t>
     </m:r>
     <m:r>
-        <m:t xml:space=\\"preserve\\">+2</m:t>
+        <m:t xml:space="preserve">+2</m:t>
     </m:r>
     <m:r>
         <w:rPr>
@@ -1579,15 +1579,15 @@ exports[`Can produce OOML from mathml2omml/single_line_with_styling.mml 1`] = `
         <m:rPr>
             <m:nor/>
         </m:rPr>
-        <m:t xml:space=\\"preserve\\">=4</m:t>
+        <m:t xml:space="preserve">=4</m:t>
     </m:r>
 </m:oMath>"
 `;
 
 exports[`Can produce OOML from mathml2omml/single_line_with_symbol.mml 1`] = `
-"<m:oMath xmlns:m=\\"http://schemas.openxmlformats.org/officeDocument/2006/math\\">
+"<m:oMath xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
     <m:r>
-        <m:t xml:space=\\"preserve\\">2+ℜ=4</m:t>
+        <m:t xml:space="preserve">2+ℜ=4</m:t>
     </m:r>
 </m:oMath>"
 `;

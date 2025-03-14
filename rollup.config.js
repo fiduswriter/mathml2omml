@@ -15,13 +15,8 @@ export default {
   input: 'src/index.js',
   output: [
     {
-      file: 'dist/index.esm.js',
+      file: 'dist/index.js',
       format: 'module',
-      sourcemap: true
-    },
-    {
-      file: 'dist/index.cjs.js',
-      format: 'cjs',
       sourcemap: true
     }
   ],
