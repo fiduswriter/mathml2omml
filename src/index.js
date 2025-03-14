@@ -2,9 +2,9 @@ import { parse, stringifyDoc } from './parse-stringify'
 import { walker } from './walker.js'
 
 class MML2OMML {
-  constructor (mmlString) {
+  constructor (mmlString, options) {
     this.inString = mmlString
-    this.inXML = parse(mmlString)
+    this.inXML = parse(mmlString, options)
     this.outXML = false
     this.outString = false
   }
@@ -21,8 +21,8 @@ class MML2OMML {
   }
 }
 
-export const mml2omml = function (mmlString) {
-  const converter = new MML2OMML(mmlString)
+export const mml2omml = function (mmlString, options) {
+  const converter = new MML2OMML(mmlString, options)
   converter.run()
   return converter.getResult()
 }
