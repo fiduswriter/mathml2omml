@@ -4,11 +4,13 @@
   "description": "a MathML to OMML converter ",
   "main": "./dist/index.js",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
     "lint": "eslint src/",
     "transpile": "rollup -c",
-    "prepublishOnly": "npm run lint && npm run transpile",
+    "copy_types": "cp src/index.d.ts dist/",
+    "prepublishOnly": "npm run lint && npm run transpile && npm run copy_types",
     "prepare": "husky"
   },
   "repository": {
@@ -41,16 +43,5 @@
     "lint-staged": "^15.5.0",
     "rollup": "^4.35.0",
     "xml-formatter": "^3.6.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint --fix",
-      "git add"
-    ]
   }
 }

@@ -2,6 +2,8 @@
 
 Convert MathML to the OOML format used in DOCX files without XSLT.
 
+## Usage
+
 You can use it like this:
 
 ```js
@@ -28,12 +30,29 @@ console.log(omml)
 >        <m:t xml:space="preserve">2+2=4</m:t>
 >    </m:r>
 > </m:oMath>
-
 ```
 
+## TypeScript Support
 
-License
-=======
+This library includes TypeScript definitions:
+
+```ts
+import { mml2omml } from "mathml2omml";
+
+// Simple usage
+const omml = mml2omml(mathmlString);
+
+// With options
+const omml = mml2omml(mathmlString, { disableDecode: true });
+
+// Using the class directly
+import { MML2OMML } from "mathml2omml";
+const converter = new MML2OMML(mathmlString);
+converter.run();
+const result = converter.getResult();
+```
+
+## License
 
 LGPL v.3.0 or later.
 
