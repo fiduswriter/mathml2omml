@@ -112,6 +112,14 @@ function textContainer(element, targetParent, previousSibling, nextSibling, ance
       },
       children: []
     }
+
+    if (element.children.length < 1) {
+      targetElement.children.push({
+        type: 'text',
+        data: '&#x200B;'
+      })
+    }
+
     rElement.children.push(targetElement)
     targetParent.children.push(rElement)
   }
