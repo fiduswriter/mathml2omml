@@ -76,7 +76,7 @@ export function getStyle(element, ancestors, previousStyle = {}) {
     }
   }
   // Override variant for some types
-  if (!elAttributes.mathvariant) {
+  if (!elAttributes.mathvariant && variant !== 'normal') {
     const textContent = getTextContent(element)
     if (
       previousStyle.variant === '' &&

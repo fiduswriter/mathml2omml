@@ -1,6 +1,7 @@
 import { getStyle } from './text_style.js'
 
 const STYLES = {
+  normal: 'p',
   bold: 'b',
   italic: 'i',
   'bold-italic': 'bi'

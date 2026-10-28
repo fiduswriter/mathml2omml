@@ -4,6 +4,12 @@ const NARY_REGEXP = /^[\u220f-\u2211]|[\u2229-\u2233]|[\u22c0-\u22c3]$/
 const GROW_REGEXP = /^\u220f|\u2211|[\u2229-\u222b]|\u222e|\u222f|\u2232|\u2233|[\u22c0-\u22c3]$/
 
 export function getNary(node) {
+  const hasLayout = (node) =>
+    ['mphantom', 'mpadded'].includes(node.name) || node.children?.some(hasLayout)
+  // Replacing the base with an operator character would discard its layout.
+  if (hasLayout(node)) {
+    return false
+  }
   // Check if node contains only a nary operator.
   const text = getTextContent(node)
   if (NARY_REGEXP.test(text)) {

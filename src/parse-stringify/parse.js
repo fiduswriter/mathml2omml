@@ -50,7 +50,10 @@ export function parse(html, options = {}) {
         nextChar &&
         nextChar !== '<'
       ) {
-        const data = html.slice(start, html.indexOf('<', start)).trim()
+        const raw = html.slice(start, html.indexOf('<', start))
+        // Preserve mathematical spaces in mtext, including whitespace-only tokens.
+        const data =
+          current.name === 'mtext' ? raw.replace(/^[\t\n\r ]+|[\t\n\r ]+$/g, '') : raw.trim()
         current.children.push({
           type: 'text',
           data: options.disableDecode ? data : entities.decodeXML(data)
